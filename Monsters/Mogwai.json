@@ -1,0 +1,2727 @@
+{
+  "InstanceID": -29300,
+  "ID": 664,
+  "JournalNumber": 37,
+  "Name": "Mogwai",
+  "TypesName": "Nature Beast Mage",
+  "TypesArray": [
+    4,
+    7,
+    16
+  ],
+  "IsSpectralFamiliar": false,
+  "ExploreAbilityName": "Snowball Toss",
+  "ExploreAbilityDescription": "- Activates ice orbs",
+  "HasSonarAbility": false,
+  "BaseStats": {
+    "attack": 6,
+    "magic": 6,
+    "defense": 3,
+    "health": 5,
+    "mana": 6
+  },
+  "LightShiftStats": {
+    "attack": 2,
+    "magic": 2,
+    "defense": 1,
+    "health": 2,
+    "mana": 1
+  },
+  "DarkShiftStats": {
+    "attack": 1,
+    "magic": 1,
+    "defense": 1,
+    "health": 1,
+    "mana": 2
+  },
+  "LightShiftPassive": {
+    "ID": 1396,
+    "Name": "Curse Breaker",
+    "Description": "Aura: At the start of the turn, remove a Debuff from each Monster in the party.",
+    "IsPassiveSkill": true,
+    "PassiveSkillProperties": {
+      "Description": "At the start of the turn, remove a Debuff from each Monster in the party.",
+      "IsAura": true,
+      "IsUnique": false
+    },
+    "IsPassiveAntitoxin": true,
+    "PassiveAntitoxinProperties": {
+      "IsOnMonsterUpkeep": true,
+      "IsOnAllyMonsterUpkeep": true,
+      "IsOnCombatStart": true,
+      "IsOnAllyCombatStart": true,
+      "TypeRestriction": 0,
+      "GrantsAgeStack": false
+    }
+  },
+  "DarkShiftPassive": {
+    "ID": 903,
+    "Name": "Dark Instinct",
+    "Description": "Increases damage dealt by 20%.",
+    "IsPassiveSkill": true,
+    "PassiveSkillProperties": {
+      "Description": "Increases damage dealt by {0%}.",
+      "IsAura": false,
+      "IsUnique": false
+    },
+    "IsPassiveImproveStat": true,
+    "PassiveImproveStatProperties": {
+      "IsOnCalculateBaseStats": true,
+      "IsOnCalculateStats": true,
+      "Stat": 9,
+      "Value": 0.2,
+      "IsPercent": true,
+      "IsNegative": false
+    }
+  },
+  "BaseSkills": [
+    {
+      "ID": 666,
+      "Name": "Snowball Toss",
+      "Description": "1 x 230% physical damage (water)",
+      "IsBaseAction": true,
+      "BaseActionProperties": {
+        "Tier": 1,
+        "Ultimate": false,
+        "Mana": 60,
+        "TargetType": 0,
+        "Duration": 1.4,
+        "IsDefaultAction": false,
+        "Tooltip": "",
+        "ParentAction": null,
+        "SpecialAttackAnimation": false,
+        "IsPotion": false
+      },
+      "IsActionModifier": true,
+      "ActionModifierProperties": {},
+      "IsActionDamage": true,
+      "ActionDamageProperties": {
+        "DamageMultiplicator": 2.3,
+        "TotalDamage": 2.3,
+        "CalculatedDamage": 2.3,
+        "CalculatedTotalDamage": 2.3,
+        "HitTimings": [
+          1.0
+        ],
+        "Element": 2,
+        "Type": 0,
+        "FlashDuration": 0.4,
+        "MultipleEnemiesDelay": 0.2,
+        "CritDamageBonus": 0.0,
+        "DefenseBypass": 0.0,
+        "DefenseBypassBurnCondition": false,
+        "PlayHitAnimation": true,
+        "TriggersBleed": false,
+        "CannotBeDodged": false,
+        "TriggersAllShocks": false,
+        "LifestealAmount": 0.0,
+        "GravityMultiplier": 0.0,
+        "BuffMultiplier": 0.0
+      }
+    },
+    {
+      "ID": 669,
+      "Name": "Ice Bolt",
+      "Description": "1 x 220% magical damage (water) Applies Chill (Debuff)",
+      "IsBaseAction": true,
+      "BaseActionProperties": {
+        "Tier": 1,
+        "Ultimate": false,
+        "Mana": 60,
+        "TargetType": 0,
+        "Duration": 1.8,
+        "IsDefaultAction": false,
+        "Tooltip": "",
+        "ParentAction": null,
+        "SpecialAttackAnimation": false,
+        "IsPotion": false
+      },
+      "IsActionModifier": true,
+      "ActionModifierProperties": {},
+      "IsActionDamage": true,
+      "ActionDamageProperties": {
+        "DamageMultiplicator": 2.2,
+        "TotalDamage": 2.2,
+        "CalculatedDamage": 2.2,
+        "CalculatedTotalDamage": 2.2,
+        "HitTimings": [
+          1.5
+        ],
+        "Element": 2,
+        "Type": 1,
+        "FlashDuration": 0.4,
+        "MultipleEnemiesDelay": 0.2,
+        "CritDamageBonus": 0.0,
+        "DefenseBypass": 0.0,
+        "DefenseBypassBurnCondition": false,
+        "PlayHitAnimation": true,
+        "TriggersBleed": false,
+        "CannotBeDodged": false,
+        "TriggersAllShocks": false,
+        "LifestealAmount": 0.0,
+        "GravityMultiplier": 0.0,
+        "BuffMultiplier": 0.0
+      },
+      "IsActionDebuff": true,
+      "ActionDebuffProperties": {
+        "Debuffs": [
+          3
+        ],
+        "ApplyDelay": 0.7,
+        "ApplyChance": 1.0,
+        "TargetCount": 1
+      }
+    },
+    {
+      "ID": 194,
+      "Name": "Fire Weakness",
+      "Description": "Fire damage increased by 50%",
+      "IsPassiveSkill": true,
+      "PassiveSkillProperties": {
+        "Description": "Fire damage increased by {50%}",
+        "IsAura": false,
+        "IsUnique": false
+      },
+      "IsPassiveElementModifier": true,
+      "PassiveElementModifierProperties": {
+        "Element": 1,
+        "Modifier": 0.5
+      }
+    },
+    {
+      "ID": 203,
+      "Name": "Wind Resistance",
+      "Description": "Wind damage reduced by 50%",
+      "IsPassiveSkill": true,
+      "PassiveSkillProperties": {
+        "Description": "Wind damage reduced by {50%}",
+        "IsAura": false,
+        "IsUnique": false
+      },
+      "IsPassiveElementModifier": true,
+      "PassiveElementModifierProperties": {
+        "Element": 3,
+        "Modifier": -0.5
+      }
+    }
+  ],
+  "SkillTrees": [
+    {
+      "Tier1Skills": [
+        {
+          "ID": 666,
+          "Name": "Snowball Toss",
+          "Description": "1 x 230% physical damage (water)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 1,
+            "Ultimate": false,
+            "Mana": 60,
+            "TargetType": 0,
+            "Duration": 1.4,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": null,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 2.3,
+            "TotalDamage": 2.3,
+            "CalculatedDamage": 2.3,
+            "CalculatedTotalDamage": 2.3,
+            "HitTimings": [
+              1.0
+            ],
+            "Element": 2,
+            "Type": 0,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          }
+        }
+      ],
+      "Tier2Skills": [
+        {
+          "ID": 667,
+          "Name": "Snowball Toss Lvl 2",
+          "Description": "1 x 285% physical damage (water)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 2,
+            "Ultimate": false,
+            "Mana": 90,
+            "TargetType": 0,
+            "Duration": 1.4,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 666,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 2.85,
+            "TotalDamage": 2.85,
+            "CalculatedDamage": 2.87,
+            "CalculatedTotalDamage": 2.87,
+            "HitTimings": [
+              1.0
+            ],
+            "Element": 2,
+            "Type": 0,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          }
+        },
+        {
+          "ID": 677,
+          "Name": "Severe Hit",
+          "Description": "If a single hit deals more than 20% of the enemy's Max HP (10% against Champions), the enemy is afflicted with Armor Break (Debuff) and a stack of Wound.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "OverlayDebuffs": [
+              5
+            ],
+            "OverlaySpecialBuff": {
+              "BuffType": 6,
+              "Name": "Wound",
+              "Icon": "wound",
+              "Description": "Reduces all healing this Monster receives by 40%. Removed at the end of the turn after healing was received.",
+              "IsNegative": true
+            },
+            "Description": "If a single hit deals more than {0%} of the enemy's Max HP ({1%} against Champions), the enemy is afflicted with {Armor Break} (Debuff) and a stack of {Wound}.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveSevereHit": true,
+          "PassiveSevereHitProperties": {
+            "IsOnActionDamagePostHit": true,
+            "IsOnCounterAttackPostHit": true,
+            "Debuff": 5,
+            "SpecialBuff": 6,
+            "DamageTreshold": 0.2,
+            "ChampionTreshold": 0.1
+          }
+        },
+        {
+          "ID": 207,
+          "Name": "Attack Plus",
+          "Description": "Improve Attack rating by 1 (Increases Attack by 26)",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStat": true,
+          "PassiveImproveStatProperties": {
+            "IsOnCalculateBaseStats": true,
+            "IsOnCalculateStats": true,
+            "Stat": 0,
+            "Value": 1.0,
+            "IsPercent": false,
+            "IsNegative": false
+          }
+        },
+        {
+          "ID": 655,
+          "Name": "Critical Defense",
+          "Description": "Reduces damage taken by 10% of own Critical Damage value.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "Reduces damage taken by {0%} of own Critical Damage value.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveCriticalDefense": true,
+          "PassiveCriticalDefenseProperties": {
+            "IsOnCalculateStatsPostMultiplication": true,
+            "ReduceValue": 0.1
+          }
+        }
+      ],
+      "Tier3Skills": [
+        {
+          "ID": 668,
+          "Name": "Snowball Toss Lvl 3",
+          "Description": "1 x 355% physical damage (water)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 3,
+            "Ultimate": false,
+            "Mana": 125,
+            "TargetType": 0,
+            "Duration": 1.4,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 667,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 3.55,
+            "TotalDamage": 3.55,
+            "CalculatedDamage": 3.56049967,
+            "CalculatedTotalDamage": 3.56049967,
+            "HitTimings": [
+              1.0
+            ],
+            "Element": 2,
+            "Type": 0,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          }
+        },
+        {
+          "ID": 675,
+          "Name": "Avalanche",
+          "Description": "1 x 160% physical damage (water) Hits all enemies, Critical Damage +30%",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 3,
+            "Ultimate": false,
+            "Mana": 120,
+            "TargetType": 1,
+            "Duration": 1.8,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": null,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 1.6,
+            "TotalDamage": 1.6,
+            "CalculatedDamage": 1.63030982,
+            "CalculatedTotalDamage": 1.63030982,
+            "HitTimings": [
+              1.1
+            ],
+            "Element": 2,
+            "Type": 0,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.1,
+            "CritDamageBonus": 0.3,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          }
+        },
+        {
+          "ID": 227,
+          "Name": "Crit Chance Plus",
+          "Description": "+5% Critical Chance",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "+{0%} Critical Chance",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStat": true,
+          "PassiveImproveStatProperties": {
+            "IsOnCalculateBaseStats": true,
+            "IsOnCalculateStats": true,
+            "Stat": 5,
+            "Value": 0.05,
+            "IsPercent": false,
+            "IsNegative": false
+          }
+        },
+        {
+          "ID": 150,
+          "Name": "Precision",
+          "Description": "First hit of an ability has a 20% increased Critical Chance.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "First hit of an ability has a {0%} increased Critical Chance. ",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassivePrecision": true,
+          "PassivePrecisionProperties": {
+            "critChance": 0.2,
+            "cannotMiss": false
+          }
+        }
+      ],
+      "Tier4Skills": [
+        {
+          "ID": 674,
+          "Name": "Snowball Toss Lvl 4",
+          "Description": "1 x 435% physical damage (water)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 4,
+            "Ultimate": false,
+            "Mana": 160,
+            "TargetType": 0,
+            "Duration": 1.4,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 668,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 4.35,
+            "TotalDamage": 4.35,
+            "CalculatedDamage": 4.338975,
+            "CalculatedTotalDamage": 4.338975,
+            "HitTimings": [
+              1.0
+            ],
+            "Element": 2,
+            "Type": 0,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          }
+        },
+        {
+          "ID": 676,
+          "Name": "Avalanche Lvl 2",
+          "Description": "1 x 210% physical damage (water) Hits all enemies, Critical Damage +40%",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 4,
+            "Ultimate": false,
+            "Mana": 160,
+            "TargetType": 1,
+            "Duration": 1.8,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 675,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 2.1,
+            "TotalDamage": 2.1,
+            "CalculatedDamage": 2.08206534,
+            "CalculatedTotalDamage": 2.08206534,
+            "HitTimings": [
+              1.1
+            ],
+            "Element": 2,
+            "Type": 0,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.1,
+            "CritDamageBonus": 0.4,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          }
+        },
+        {
+          "ID": 682,
+          "Name": "Critical Liquid",
+          "Description": "Water attacks have 10% increased Critical Chance.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "Water attacks have {0%} increased Critical Chance.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveElementCritChance": true,
+          "PassiveElementCritChanceProperties": {
+            "CritBonus": 0.1,
+            "Element": 2
+          }
+        },
+        {
+          "ID": 678,
+          "Name": "Single Strike",
+          "Description": "If this Monster is the last and only Monster during the turn to attack, it deals 25% increased damage.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "If this Monster is the last and only Monster during the turn to attack, it deals {0%} increased damage.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveSingleStrike": true,
+          "PassiveSingleStrikeProperties": {
+            "IsOnCalculateStats": true,
+            "DamageIncrease": 0.25
+          }
+        }
+      ],
+      "Tier5Skills": [
+        {
+          "ID": 1287,
+          "Name": "Snowball Toss Lvl 5",
+          "Description": "1 x 540% physical damage (water)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 5,
+            "Ultimate": false,
+            "Mana": 210,
+            "TargetType": 0,
+            "Duration": 1.4,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 674,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 5.4,
+            "TotalDamage": 5.4,
+            "CalculatedDamage": 5.376856,
+            "CalculatedTotalDamage": 5.376856,
+            "HitTimings": [
+              1.0
+            ],
+            "Element": 2,
+            "Type": 0,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          }
+        },
+        {
+          "ID": 1276,
+          "Name": "Avalanche Lvl 3",
+          "Description": "2 x 130% (260%) physical damage (water) Hits all enemies, Critical Damage +50%",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 5,
+            "Ultimate": false,
+            "Mana": 220,
+            "TargetType": 1,
+            "Duration": 2.3,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 676,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 1.3,
+            "TotalDamage": 2.6,
+            "CalculatedDamage": 1.23109615,
+            "CalculatedTotalDamage": 2.4621923,
+            "HitTimings": [
+              1.1,
+              1.6
+            ],
+            "Element": 2,
+            "Type": 0,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.1,
+            "CritDamageBonus": 0.5,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          }
+        },
+        {
+          "ID": 1107,
+          "Name": "Sure Strike",
+          "Description": "First hit of an ability has a 10% increased Critical Chance and cannot be dodged.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "First hit of an ability has a {0%} increased Critical Chance and cannot be dodged.",
+            "IsAura": false,
+            "IsUnique": true
+          },
+          "IsPassivePrecision": true,
+          "PassivePrecisionProperties": {
+            "critChance": 0.1,
+            "cannotMiss": true
+          }
+        },
+        {
+          "ID": 101,
+          "Name": "Attack Powered Shield",
+          "Description": "At the start of combat, apply a Shield equal to 150% of Attack value.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "At the start of combat, apply a Shield equal to {0%} of Attack value.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveStartCombatShield": true,
+          "PassiveStartCombatShieldProperties": {
+            "IsOnCombatStart": true,
+            "IsOnAllyCombatStart": true,
+            "IsOnCalculateTeamMonsterStats": true,
+            "Stat": 0,
+            "DualStat": false,
+            "SecondaryStat": 0,
+            "Percent": 1.5,
+            "TypeRestriction": 0,
+            "TriggerForBackupMonsters": false,
+            "BasedOnCastersStat": false,
+            "DamageReduction": 0.0,
+            "PerHealth": 0
+          }
+        }
+      ]
+    },
+    {
+      "Tier1Skills": [
+        {
+          "ID": 669,
+          "Name": "Ice Bolt",
+          "Description": "1 x 220% magical damage (water) Applies Chill (Debuff)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 1,
+            "Ultimate": false,
+            "Mana": 60,
+            "TargetType": 0,
+            "Duration": 1.8,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": null,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 2.2,
+            "TotalDamage": 2.2,
+            "CalculatedDamage": 2.2,
+            "CalculatedTotalDamage": 2.2,
+            "HitTimings": [
+              1.5
+            ],
+            "Element": 2,
+            "Type": 1,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          },
+          "IsActionDebuff": true,
+          "ActionDebuffProperties": {
+            "Debuffs": [
+              3
+            ],
+            "ApplyDelay": 0.7,
+            "ApplyChance": 1.0,
+            "TargetCount": 1
+          }
+        }
+      ],
+      "Tier2Skills": [
+        {
+          "ID": 671,
+          "Name": "Ice Bolt Lvl 2",
+          "Description": "1 x 275% magical damage (water) Applies Chill (Debuff)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 2,
+            "Ultimate": false,
+            "Mana": 90,
+            "TargetType": 0,
+            "Duration": 1.8,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 669,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 2.75,
+            "TotalDamage": 2.75,
+            "CalculatedDamage": 2.74,
+            "CalculatedTotalDamage": 2.74,
+            "HitTimings": [
+              1.5
+            ],
+            "Element": 2,
+            "Type": 1,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          },
+          "IsActionDebuff": true,
+          "ActionDebuffProperties": {
+            "Debuffs": [
+              3
+            ],
+            "ApplyDelay": 0.7,
+            "ApplyChance": 1.0,
+            "TargetCount": 1
+          }
+        },
+        {
+          "ID": 117,
+          "Name": "Magic Plus",
+          "Description": "Improve Magic rating by 1 (Increases Magic by 26)",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStat": true,
+          "PassiveImproveStatProperties": {
+            "IsOnCalculateBaseStats": true,
+            "IsOnCalculateStats": true,
+            "Stat": 1,
+            "Value": 1.0,
+            "IsPercent": false,
+            "IsNegative": false
+          }
+        },
+        {
+          "ID": 78,
+          "Name": "Health Plus",
+          "Description": "Improve Health rating by 1 (Increases Health by 332)",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStat": true,
+          "PassiveImproveStatProperties": {
+            "IsOnCalculateBaseStats": true,
+            "IsOnCalculateStats": true,
+            "Stat": 3,
+            "Value": 1.0,
+            "IsPercent": false,
+            "IsNegative": false
+          }
+        }
+      ],
+      "Tier3Skills": [
+        {
+          "ID": 672,
+          "Name": "Ice Bolt Lvl 3",
+          "Description": "1 x 335% magical damage (water) Applies Chill (Debuff)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 3,
+            "Ultimate": false,
+            "Mana": 120,
+            "TargetType": 0,
+            "Duration": 1.8,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 671,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 3.35,
+            "TotalDamage": 3.35,
+            "CalculatedDamage": 3.34149981,
+            "CalculatedTotalDamage": 3.34149981,
+            "HitTimings": [
+              1.5
+            ],
+            "Element": 2,
+            "Type": 1,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          },
+          "IsActionDebuff": true,
+          "ActionDebuffProperties": {
+            "Debuffs": [
+              3
+            ],
+            "ApplyDelay": 0.7,
+            "ApplyChance": 1.0,
+            "TargetCount": 1
+          }
+        },
+        {
+          "ID": 186,
+          "Name": "Ice Storm",
+          "Description": "1 x 160% magical damage (water) Hits all enemies, 50% chance to apply Chill (Debuff)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 3,
+            "Ultimate": false,
+            "Mana": 120,
+            "TargetType": 1,
+            "Duration": 2.5,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": null,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 1.6,
+            "TotalDamage": 1.6,
+            "CalculatedDamage": 1.62354982,
+            "CalculatedTotalDamage": 1.62354982,
+            "HitTimings": [
+              2.0
+            ],
+            "Element": 2,
+            "Type": 1,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": false,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          },
+          "IsActionDebuff": true,
+          "ActionDebuffProperties": {
+            "Debuffs": [
+              3
+            ],
+            "ApplyDelay": 0.8,
+            "ApplyChance": 0.5,
+            "TargetCount": 1
+          }
+        },
+        {
+          "ID": 656,
+          "Name": "First Impact",
+          "Description": "Increases the base damage of the first hit of an attack by an additional 40% of Attack (physical) or Magic (magical). (25% for mass attacks)",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "Increases the base damage of the first hit of an attack by an additional {0%} of attack (physical) or magic (magical). ({1%} for mass attacks)",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveFirstImpact": true,
+          "PassiveFirstImpactProperties": {
+            "IsOnActionDamageStarted": true,
+            "IsOnCounterAttackStarted": true,
+            "DamageBonus": 0.4,
+            "MassDamageBonus": 0.25
+          }
+        },
+        {
+          "ID": 534,
+          "Name": "Multi Chill",
+          "Description": "Aura: Chill (Debuff) can be stacked two additional times on enemies. Additional stacks are only half as strong.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "{Chill} (Debuff) can be stacked two additional times on enemies. Additional stacks are only half as strong.",
+            "IsAura": true,
+            "IsUnique": false
+          },
+          "IsPassiveIncreaseDebuffStacks": true,
+          "PassiveIncreaseDebuffStacksProperties": {
+            "stackCountIncrease": 2,
+            "Debuff": 3
+          }
+        }
+      ],
+      "Tier4Skills": [
+        {
+          "ID": 673,
+          "Name": "Ice Bolt Lvl 4",
+          "Description": "1 x 410% magical damage (water) Applies Chill (Debuff)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 4,
+            "Ultimate": false,
+            "Mana": 160,
+            "TargetType": 0,
+            "Duration": 1.8,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 672,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 4.1,
+            "TotalDamage": 4.1,
+            "CalculatedDamage": 4.119275,
+            "CalculatedTotalDamage": 4.119275,
+            "HitTimings": [
+              1.5
+            ],
+            "Element": 2,
+            "Type": 1,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          },
+          "IsActionDebuff": true,
+          "ActionDebuffProperties": {
+            "Debuffs": [
+              3
+            ],
+            "ApplyDelay": 0.7,
+            "ApplyChance": 1.0,
+            "TargetCount": 1
+          }
+        },
+        {
+          "ID": 626,
+          "Name": "Ice Storm Lvl 2",
+          "Description": "1 x 210% magical damage (water) Hits all enemies, 50% chance to apply Chill (Debuff)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 4,
+            "Ultimate": false,
+            "Mana": 170,
+            "TargetType": 1,
+            "Duration": 2.5,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 186,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 2.1,
+            "TotalDamage": 2.1,
+            "CalculatedDamage": 2.12327719,
+            "CalculatedTotalDamage": 2.12327719,
+            "HitTimings": [
+              2.0
+            ],
+            "Element": 2,
+            "Type": 1,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": false,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          },
+          "IsActionDebuff": true,
+          "ActionDebuffProperties": {
+            "Debuffs": [
+              3
+            ],
+            "ApplyDelay": 0.8,
+            "ApplyChance": 0.5,
+            "TargetCount": 1
+          }
+        },
+        {
+          "ID": 618,
+          "Name": "Shatter",
+          "Description": "Unique Aura: Chill causes attacks against enemies affected by it to have 10% increased Critical Chance.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "{Chill} causes attacks against enemies affected by it to have {0%} increased Critical Chance.",
+            "IsAura": true,
+            "IsUnique": true
+          },
+          "IsPassiveShatter": true,
+          "PassiveShatterProperties": {
+            "CritChanceBonus": 0.1
+          }
+        },
+        {
+          "ID": 577,
+          "Name": "Magic Proc",
+          "Description": "Every attack triggers an additional hit equal to 35% of Magic value.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "Every attack triggers an additional hit equal to {1%} of Magic value.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveComboMaster": true,
+          "PassiveComboMasterProperties": {
+            "IsOnAllyActionDamageStarted": true,
+            "DamageValue": 0.0,
+            "StatScaling": 0.35,
+            "ScaleStat": 1,
+            "AnimElement": null,
+            "ElementRestriction": 8,
+            "TypeRestriction": 0
+          }
+        }
+      ],
+      "Tier5Skills": [
+        {
+          "ID": 1281,
+          "Name": "Ice Bolt Lvl 5",
+          "Description": "1 x 510% magical damage (water) Applies Chill (Debuff)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 5,
+            "Ultimate": false,
+            "Mana": 210,
+            "TargetType": 0,
+            "Duration": 1.8,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 673,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 5.1,
+            "TotalDamage": 5.1,
+            "CalculatedDamage": 5.09124565,
+            "CalculatedTotalDamage": 5.09124565,
+            "HitTimings": [
+              1.5
+            ],
+            "Element": 2,
+            "Type": 1,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          },
+          "IsActionDebuff": true,
+          "ActionDebuffProperties": {
+            "Debuffs": [
+              3
+            ],
+            "ApplyDelay": 0.7,
+            "ApplyChance": 1.0,
+            "TargetCount": 1
+          }
+        },
+        {
+          "ID": 1285,
+          "Name": "Ice Storm Lvl 3",
+          "Description": "2 x 130% (260%) magical damage (water) Hits all enemies, 50% chance to apply Chill (Debuff)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 5,
+            "Ultimate": false,
+            "Mana": 230,
+            "TargetType": 1,
+            "Duration": 3.0,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 626,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 1.3,
+            "TotalDamage": 2.6,
+            "CalculatedDamage": 1.29417741,
+            "CalculatedTotalDamage": 2.58835483,
+            "HitTimings": [
+              2.0,
+              2.5
+            ],
+            "Element": 2,
+            "Type": 1,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": false,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          },
+          "IsActionDebuff": true,
+          "ActionDebuffProperties": {
+            "Debuffs": [
+              3
+            ],
+            "ApplyDelay": 0.8,
+            "ApplyChance": 0.5,
+            "TargetCount": 1
+          }
+        },
+        {
+          "ID": 1117,
+          "Name": "Magic Penetration",
+          "Description": "Aura: Mage Monsters in the party ignore 15% of the target's Defense damage reduction value.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "{Mage} Monsters in the party ignore {0%} of the target's Defense damage reduction value.",
+            "IsAura": true,
+            "IsUnique": false
+          },
+          "IsPassiveArmorBypass": true,
+          "PassiveArmorBypassProperties": {
+            "IsOnCalculateStats": true,
+            "IsOnCalculateTeamMonsterStats": true,
+            "BypassAmount": 0.15,
+            "TypeRestriction": 16
+          }
+        },
+        {
+          "ID": 121,
+          "Name": "Magic Powered Shield",
+          "Description": "At the start of combat, apply a Shield equal to 150% of Magic value.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "At the start of combat, apply a Shield equal to {0%} of Magic value.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveStartCombatShield": true,
+          "PassiveStartCombatShieldProperties": {
+            "IsOnCombatStart": true,
+            "IsOnAllyCombatStart": true,
+            "IsOnCalculateTeamMonsterStats": true,
+            "Stat": 1,
+            "DualStat": false,
+            "SecondaryStat": 0,
+            "Percent": 1.5,
+            "TypeRestriction": 0,
+            "TriggerForBackupMonsters": false,
+            "BasedOnCastersStat": false,
+            "DamageReduction": 0.0,
+            "PerHealth": 0
+          }
+        }
+      ]
+    },
+    {
+      "Tier1Skills": [
+        {
+          "ID": 171,
+          "Name": "Barrier",
+          "Description": "Applies Barrier (Buff) to whole party",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 1,
+            "Ultimate": false,
+            "Mana": 60,
+            "TargetType": 4,
+            "Duration": 1.5,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": null,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionBuff": true,
+          "ActionBuffProperties": {
+            "Buffs": [
+              8
+            ],
+            "ApplyDelay": 1.0,
+            "SecondaryBuffCount": 3,
+            "RandomBuffCount": 0
+          }
+        }
+      ],
+      "Tier2Skills": [
+        {
+          "ID": 1931,
+          "Name": "Magnitude",
+          "Description": "Applies Barrier (Buff) to whole party Applies Glory (Buff) to a random Monster.",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 1,
+            "Ultimate": false,
+            "Mana": 90,
+            "TargetType": 4,
+            "Duration": 1.7,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 171,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionBuff": true,
+          "ActionBuffProperties": {
+            "Buffs": [
+              8,
+              2
+            ],
+            "ApplyDelay": 0.8,
+            "SecondaryBuffCount": 1,
+            "RandomBuffCount": 0
+          }
+        },
+        {
+          "ID": 242,
+          "Name": "Defense Plus",
+          "Description": "Improve Defense rating by 1 (Increases Defense by 36)",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStat": true,
+          "PassiveImproveStatProperties": {
+            "IsOnCalculateBaseStats": true,
+            "IsOnCalculateStats": true,
+            "Stat": 2,
+            "Value": 1.0,
+            "IsPercent": false,
+            "IsNegative": false
+          }
+        },
+        {
+          "ID": 381,
+          "Name": "Recover",
+          "Description": "Heals 10% of this Monster's Max Health at the start of every turn.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "Heals {0%} of this Monster's Max Health at the start of every turn.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveSupply": true,
+          "PassiveSupplyProperties": {
+            "IsOnMonsterUpkeep": true,
+            "IsOnAllyMonsterUpkeep": true,
+            "IsOnCombatStart": true,
+            "IsOnAllyCombatStart": true,
+            "HealValue": 0.1,
+            "TargetType": 3,
+            "BaseOnOwnHealth": true,
+            "MonsterType": 0,
+            "MonsterType2": 0,
+            "AppliesRandomBuff": false,
+            "AppliesAgeStack": false
+          }
+        },
+        {
+          "ID": 125,
+          "Name": "Protector",
+          "Description": "Aura: All Monsters in the party receive 7.5% less damage.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "All Monsters in the party receive {0%} less damage.",
+            "IsAura": true,
+            "IsUnique": false
+          },
+          "IsPassiveProtector": true,
+          "PassiveProtectorProperties": {
+            "IsOnCalculateTeamMonsterStats": true,
+            "IsOnAllyMonsterUpkeep": true,
+            "damageReduction": 0.075,
+            "MonsterType": 0,
+            "MonsterType2": 0,
+            "OnlyMassAttacks": false,
+            "AppliesRandomBuff": false
+          }
+        }
+      ],
+      "Tier3Skills": [
+        {
+          "ID": 1932,
+          "Name": "Magnitude Lvl 2",
+          "Description": "Applies Barrier (Buff) to whole party Applies Glory (Buff) to two random Monsters.",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 1,
+            "Ultimate": false,
+            "Mana": 120,
+            "TargetType": 4,
+            "Duration": 1.7,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 1931,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionBuff": true,
+          "ActionBuffProperties": {
+            "Buffs": [
+              8,
+              2
+            ],
+            "ApplyDelay": 0.8,
+            "SecondaryBuffCount": 2,
+            "RandomBuffCount": 0
+          }
+        },
+        {
+          "ID": 98,
+          "Name": "Combo Buffing",
+          "Description": "Every Buff action applies one additional random Buff.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "Every Buff action applies one additional random Buff.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveComboBuffing": true,
+          "PassiveComboBuffingProperties": {
+            "IsOnAllyActionStarted": true,
+            "AffectsHealsShields": false
+          }
+        },
+        {
+          "ID": 128,
+          "Name": "Buffing Shield",
+          "Description": "When applying a Buff, also apply a Shield equal to 30% of this Monster's Defense.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "When applying a Buff, also apply a Shield equal to {0%} of this Monster's Defense. ",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveBuffingShield": true,
+          "PassiveBuffingShieldProperties": {
+            "IsOnApplyBuff": true,
+            "ShieldAmount": 0.3
+          }
+        },
+        {
+          "ID": 122,
+          "Name": "Crit Damage Plus",
+          "Description": "+15% Critical Damage",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "+{0%} Critical Damage",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStat": true,
+          "PassiveImproveStatProperties": {
+            "IsOnCalculateBaseStats": true,
+            "IsOnCalculateStats": true,
+            "Stat": 6,
+            "Value": 0.15,
+            "IsPercent": false,
+            "IsNegative": false
+          }
+        }
+      ],
+      "Tier4Skills": [
+        {
+          "ID": 1933,
+          "Name": "Magnitude Lvl 3",
+          "Description": "Applies Barrier & Glory (Buffs) to whole party",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 1,
+            "Ultimate": false,
+            "Mana": 160,
+            "TargetType": 4,
+            "Duration": 1.8,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 1932,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionBuff": true,
+          "ActionBuffProperties": {
+            "Buffs": [
+              8,
+              2
+            ],
+            "ApplyDelay": 0.8,
+            "SecondaryBuffCount": 3,
+            "RandomBuffCount": 0
+          }
+        },
+        {
+          "ID": 636,
+          "Name": "Helping Hand",
+          "Description": "Heal target for 5 x (110 + 50% Magic) Applies Sidekick (Buff)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 1,
+            "Ultimate": false,
+            "Mana": 150,
+            "TargetType": 3,
+            "Duration": 2.2,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": null,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionBuff": true,
+          "ActionBuffProperties": {
+            "Buffs": [
+              3
+            ],
+            "ApplyDelay": 2.0,
+            "SecondaryBuffCount": 3,
+            "RandomBuffCount": 0
+          },
+          "IsActionHeal": true,
+          "ActionHealProperties": {
+            "HealAmount": 110.0,
+            "ScaleMagic": 0.5,
+            "ScaleHealth": 0.0,
+            "ScaleAttack": 0.0,
+            "ScaleMana": 0.0,
+            "ScaleDamage": 0.0,
+            "HealCaster": false,
+            "HealTimings": [
+              0.5,
+              0.8,
+              1.1,
+              1.4,
+              1.7
+            ],
+            "ConditionType": 0,
+            "EnemyHasDebuff": 0,
+            "HealAnimElement": null,
+            "AnimElementDelay": 0.0,
+            "ActionDurationIncrease": 0.0
+          }
+        },
+        {
+          "ID": 869,
+          "Name": "Multi Glory",
+          "Description": "Aura: Glory (Buff) can be stacked two additional times. Additional stacks are only half as strong.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "{Glory} (Buff) can be stacked two additional times. Additional stacks are only half as strong.",
+            "IsAura": true,
+            "IsUnique": false
+          },
+          "IsPassiveIncreaseBuffStacks": true,
+          "PassiveIncreaseBuffStacksProperties": {
+            "stackCountIncrease": 2,
+            "Buff": 2,
+            "DuoBuff": false,
+            "Buff2": 0
+          }
+        },
+        {
+          "ID": 175,
+          "Name": "Mana Plus",
+          "Description": "Improve Mana rating by 1 (Increases Mana by 20. Increases Mana Regeneration by 11)",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStat": true,
+          "PassiveImproveStatProperties": {
+            "IsOnCalculateBaseStats": true,
+            "IsOnCalculateStats": true,
+            "Stat": 4,
+            "Value": 1.0,
+            "IsPercent": false,
+            "IsNegative": false
+          }
+        },
+        {
+          "ID": 552,
+          "Name": "Bounty",
+          "Description": "This Monster gets 2 random Buffs when an enemy Monster is knocked out.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "This Monster gets {0} random Buffs when an enemy Monster is knocked out.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveBounty": true,
+          "PassiveBountyProperties": {
+            "IsOnEnemyDeath": true,
+            "buffCount": 2
+          }
+        }
+      ],
+      "Tier5Skills": [
+        {
+          "ID": 1116,
+          "Name": "Buffing Restore",
+          "Description": "When applying a Buff, 50% chance that a Debuff is removed.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "When applying a Buff, {0%} chance that a Debuff is removed.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveBuffingRestore": true,
+          "PassiveBuffingRestoreProperties": {
+            "IsOnApplyBuff": true,
+            "Chance": 0.5
+          }
+        },
+        {
+          "ID": 1243,
+          "Name": "Helping Hand Lvl 2",
+          "Description": "Heal target for 5 x (150 + 55% Magic) Applies Sidekick & Regeneration (Buffs)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 1,
+            "Ultimate": false,
+            "Mana": 200,
+            "TargetType": 3,
+            "Duration": 2.7,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 636,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionBuff": true,
+          "ActionBuffProperties": {
+            "Buffs": [
+              3,
+              5
+            ],
+            "ApplyDelay": 2.0,
+            "SecondaryBuffCount": 3,
+            "RandomBuffCount": 0
+          },
+          "IsActionHeal": true,
+          "ActionHealProperties": {
+            "HealAmount": 150.0,
+            "ScaleMagic": 0.55,
+            "ScaleHealth": 0.0,
+            "ScaleAttack": 0.0,
+            "ScaleMana": 0.0,
+            "ScaleDamage": 0.0,
+            "HealCaster": false,
+            "HealTimings": [
+              0.5,
+              0.8,
+              1.1,
+              1.4,
+              1.7
+            ],
+            "ConditionType": 0,
+            "EnemyHasDebuff": 0,
+            "HealAnimElement": null,
+            "AnimElementDelay": 0.0,
+            "ActionDurationIncrease": 0.0
+          }
+        },
+        {
+          "ID": 548,
+          "Name": "Buffing Heal",
+          "Description": "When applying a Buff, also heal the target by 50% of this Monster's Magic.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "When applying a Buff, also heal the target by {0%} of this Monster's Magic.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveBuffingHeal": true,
+          "PassiveBuffingHealProperties": {
+            "IsOnApplyBuff": true,
+            "ScaleMagic": 0.5
+          }
+        },
+        {
+          "ID": 242,
+          "Name": "Defense Plus",
+          "Description": "Improve Defense rating by 1 (Increases Defense by 36)",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStat": true,
+          "PassiveImproveStatProperties": {
+            "IsOnCalculateBaseStats": true,
+            "IsOnCalculateStats": true,
+            "Stat": 2,
+            "Value": 1.0,
+            "IsPercent": false,
+            "IsNegative": false
+          }
+        },
+        {
+          "ID": 98,
+          "Name": "Combo Buffing",
+          "Description": "Every Buff action applies one additional random Buff.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "Every Buff action applies one additional random Buff.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveComboBuffing": true,
+          "PassiveComboBuffingProperties": {
+            "IsOnAllyActionStarted": true,
+            "AffectsHealsShields": false
+          }
+        }
+      ]
+    },
+    {
+      "Tier1Skills": [
+        {
+          "ID": 248,
+          "Name": "Beating",
+          "Description": "4 x 40% (160%) physical damage (neutral)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 1,
+            "Ultimate": false,
+            "Mana": 30,
+            "TargetType": 0,
+            "Duration": 1.2,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": null,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 0.4,
+            "TotalDamage": 1.6,
+            "CalculatedDamage": 0.0,
+            "CalculatedTotalDamage": 0.0,
+            "HitTimings": [
+              0.0,
+              0.3,
+              0.6,
+              0.9
+            ],
+            "Element": 0,
+            "Type": 0,
+            "FlashDuration": 0.2,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          }
+        }
+      ],
+      "Tier2Skills": [
+        {
+          "ID": 147,
+          "Name": "Beating Lvl 2",
+          "Description": "5 x 40% (200%) physical damage (neutral)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 2,
+            "Ultimate": false,
+            "Mana": 60,
+            "TargetType": 0,
+            "Duration": 1.5,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 248,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 0.4,
+            "TotalDamage": 2.0,
+            "CalculatedDamage": 0.4156,
+            "CalculatedTotalDamage": 2.078,
+            "HitTimings": [
+              0.0,
+              0.3,
+              0.6,
+              0.9,
+              1.2
+            ],
+            "Element": 0,
+            "Type": 0,
+            "FlashDuration": 0.2,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          }
+        },
+        {
+          "ID": 453,
+          "Name": "Critical Hybridization",
+          "Description": "The first critical hit of a physical attack triggers an additional hit equal to 60% of Magic value and vice versa.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "The first critical hit of a physical attack triggers an additional hit equal to {0%} of Magic value and vice versa.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveCriticalHybridization": true,
+          "PassiveCriticalHybridizationProperties": {
+            "IsOnActionDamageHit": true,
+            "DamageValue": 0.6,
+            "AnimElement": null
+          }
+        },
+        {
+          "ID": 78,
+          "Name": "Health Plus",
+          "Description": "Improve Health rating by 1 (Increases Health by 332)",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStat": true,
+          "PassiveImproveStatProperties": {
+            "IsOnCalculateBaseStats": true,
+            "IsOnCalculateStats": true,
+            "Stat": 3,
+            "Value": 1.0,
+            "IsPercent": false,
+            "IsNegative": false
+          }
+        }
+      ],
+      "Tier3Skills": [
+        {
+          "ID": 161,
+          "Name": "Beating Lvl 3",
+          "Description": "6 x 45% (270%) physical damage (neutral)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 3,
+            "Ultimate": false,
+            "Mana": 90,
+            "TargetType": 0,
+            "Duration": 1.8,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 147,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 0.45,
+            "TotalDamage": 2.69999981,
+            "CalculatedDamage": 0.446816653,
+            "CalculatedTotalDamage": 2.68089986,
+            "HitTimings": [
+              0.0,
+              0.3,
+              0.6,
+              0.9,
+              1.2,
+              1.5
+            ],
+            "Element": 0,
+            "Type": 0,
+            "FlashDuration": 0.2,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          }
+        },
+        {
+          "ID": 209,
+          "Name": "Attack Proc",
+          "Description": "Every attack triggers an additional hit equal to 35% of Attack value.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "Every attack triggers an additional hit equal to {1%} of Attack value.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveComboMaster": true,
+          "PassiveComboMasterProperties": {
+            "IsOnAllyActionDamageStarted": true,
+            "DamageValue": 0.0,
+            "StatScaling": 0.35,
+            "ScaleStat": 0,
+            "AnimElement": null,
+            "ElementRestriction": 8,
+            "TypeRestriction": 0
+          }
+        },
+        {
+          "ID": 239,
+          "Name": "Improved Mana Regeneration",
+          "Description": "+20% Mana Regeneration ",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "+{0%} Mana Regeneration ",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStat": true,
+          "PassiveImproveStatProperties": {
+            "IsOnCalculateBaseStats": true,
+            "IsOnCalculateStats": true,
+            "Stat": 7,
+            "Value": 0.2,
+            "IsPercent": true,
+            "IsNegative": false
+          }
+        },
+        {
+          "ID": 834,
+          "Name": "Crit Damage Focus",
+          "Description": "Critical Damage values from equipment increased by 50%.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "Critical Damage values from equipment increased by {0%}.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveEquipmentFocus": true,
+          "PassiveEquipmentFocusProperties": {
+            "Stat": 6,
+            "Bonus": 0.5
+          }
+        }
+      ],
+      "Tier4Skills": [
+        {
+          "ID": 684,
+          "Name": "Beating Lvl 4",
+          "Description": "7 x 50% (350%) physical damage (neutral)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 4,
+            "Ultimate": false,
+            "Mana": 130,
+            "TargetType": 0,
+            "Duration": 1.8,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 161,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 0.5,
+            "TotalDamage": 3.5,
+            "CalculatedDamage": 0.498642147,
+            "CalculatedTotalDamage": 3.490495,
+            "HitTimings": [
+              0.0,
+              0.25,
+              0.5,
+              0.75,
+              1.0,
+              1.25,
+              1.5
+            ],
+            "Element": 0,
+            "Type": 0,
+            "FlashDuration": 0.2,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          }
+        },
+        {
+          "ID": 838,
+          "Name": "Spectral Cannon",
+          "Description": "1 x 375% magical damage (neutral) ignores 50% of the target's Defense damage reduction value",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 4,
+            "Ultimate": false,
+            "Mana": 170,
+            "TargetType": 0,
+            "Duration": 2.0,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": null,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 3.75,
+            "TotalDamage": 3.75,
+            "CalculatedDamage": 0.0,
+            "CalculatedTotalDamage": 0.0,
+            "HitTimings": [
+              1.4
+            ],
+            "Element": 0,
+            "Type": 1,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.5,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          }
+        },
+        {
+          "ID": 227,
+          "Name": "Crit Chance Plus",
+          "Description": "+5% Critical Chance",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "+{0%} Critical Chance",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStat": true,
+          "PassiveImproveStatProperties": {
+            "IsOnCalculateBaseStats": true,
+            "IsOnCalculateStats": true,
+            "Stat": 5,
+            "Value": 0.05,
+            "IsPercent": false,
+            "IsNegative": false
+          }
+        },
+        {
+          "ID": 414,
+          "Name": "Critical Consistency",
+          "Description": "+10% Critical Damage. Critical Damage also increases non-Critical hits by 10% of the amount.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "+{0%} Critical Damage. Critical Damage also increases non-Critical hits by {1%} of the amount.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveCriticalConsistency": true,
+          "PassiveCriticalConsistencyProperties": {
+            "IsOnActionDamageHit": true,
+            "IsOnCounterAttackHit": true,
+            "IsOnCalculateStats": true,
+            "CritDamageBonus": 0.1,
+            "IncreaseValue": 0.1
+          }
+        }
+      ],
+      "Tier5Skills": [
+        {
+          "ID": 1250,
+          "Name": "Beating Lvl 5",
+          "Description": "8 x 55% (440%) physical damage (neutral)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 5,
+            "Ultimate": false,
+            "Mana": 180,
+            "TargetType": 0,
+            "Duration": 2.0,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 684,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 0.55,
+            "TotalDamage": 4.4,
+            "CalculatedDamage": 0.56672895,
+            "CalculatedTotalDamage": 4.5338316,
+            "HitTimings": [
+              0.0,
+              0.25,
+              0.5,
+              0.75,
+              1.0,
+              1.25,
+              1.5,
+              1.75
+            ],
+            "Element": 0,
+            "Type": 0,
+            "FlashDuration": 0.2,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          }
+        },
+        {
+          "ID": 1265,
+          "Name": "Spectral Cannon Lvl 2",
+          "Description": "1 x 450% magical damage (neutral) ignores 50% of the target's Defense damage reduction value",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 5,
+            "Ultimate": false,
+            "Mana": 220,
+            "TargetType": 0,
+            "Duration": 2.0,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 838,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 4.5,
+            "TotalDamage": 4.5,
+            "CalculatedDamage": 5.440496,
+            "CalculatedTotalDamage": 5.440496,
+            "HitTimings": [
+              1.4
+            ],
+            "Element": 0,
+            "Type": 1,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.5,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          }
+        },
+        {
+          "ID": 655,
+          "Name": "Critical Defense",
+          "Description": "Reduces damage taken by 10% of own Critical Damage value.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "Reduces damage taken by {0%} of own Critical Damage value.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveCriticalDefense": true,
+          "PassiveCriticalDefenseProperties": {
+            "IsOnCalculateStatsPostMultiplication": true,
+            "ReduceValue": 0.1
+          }
+        },
+        {
+          "ID": 414,
+          "Name": "Critical Consistency",
+          "Description": "+10% Critical Damage. Critical Damage also increases non-Critical hits by 10% of the amount.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "+{0%} Critical Damage. Critical Damage also increases non-Critical hits by {1%} of the amount.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveCriticalConsistency": true,
+          "PassiveCriticalConsistencyProperties": {
+            "IsOnActionDamageHit": true,
+            "IsOnCounterAttackHit": true,
+            "IsOnCalculateStats": true,
+            "CritDamageBonus": 0.1,
+            "IncreaseValue": 0.1
+          }
+        }
+      ]
+    }
+  ],
+  "Ultimates": [
+    {
+      "ID": 1755,
+      "Name": "Ice Breath",
+      "Description": "5 x 115% (575%) magical damage (water) Removes 2 Buffs from target - applies 2 random Buffs to itself",
+      "IsBaseAction": true,
+      "BaseActionProperties": {
+        "Tier": 6,
+        "Ultimate": true,
+        "Mana": 240,
+        "TargetType": 0,
+        "Duration": 3.7,
+        "IsDefaultAction": false,
+        "Tooltip": "",
+        "ParentAction": null,
+        "SpecialAttackAnimation": false,
+        "IsPotion": false
+      },
+      "IsActionModifier": true,
+      "ActionModifierProperties": {},
+      "IsActionBuff": true,
+      "ActionBuffProperties": {
+        "Buffs": [],
+        "ApplyDelay": 3.1,
+        "SecondaryBuffCount": 3,
+        "RandomBuffCount": 2
+      },
+      "IsActionDamage": true,
+      "ActionDamageProperties": {
+        "DamageMultiplicator": 1.15,
+        "TotalDamage": 5.75,
+        "CalculatedDamage": 1.0757947,
+        "CalculatedTotalDamage": 5.37897348,
+        "HitTimings": [
+          1.4,
+          1.7,
+          2.0,
+          2.5,
+          2.8
+        ],
+        "Element": 2,
+        "Type": 1,
+        "FlashDuration": 0.4,
+        "MultipleEnemiesDelay": 0.2,
+        "CritDamageBonus": 0.0,
+        "DefenseBypass": 0.0,
+        "DefenseBypassBurnCondition": false,
+        "PlayHitAnimation": true,
+        "TriggersBleed": false,
+        "CannotBeDodged": false,
+        "TriggersAllShocks": false,
+        "LifestealAmount": 0.0,
+        "GravityMultiplier": 0.0,
+        "BuffMultiplier": 0.0
+      },
+      "IsActionRemoveBuff": true,
+      "ActionRemoveBuffProperties": {
+        "Count": 2,
+        "Delay": 1.2
+      }
+    },
+    {
+      "ID": 1806,
+      "Name": "Ultra Speed",
+      "Description": "Applies Agility, Spellshield & Sidekick (Buffs) to whole party",
+      "IsBaseAction": true,
+      "BaseActionProperties": {
+        "Tier": 1,
+        "Ultimate": true,
+        "Mana": 210,
+        "TargetType": 4,
+        "Duration": 2.5,
+        "IsDefaultAction": false,
+        "Tooltip": "",
+        "ParentAction": null,
+        "SpecialAttackAnimation": false,
+        "IsPotion": false
+      },
+      "IsActionModifier": true,
+      "ActionModifierProperties": {},
+      "IsActionBuff": true,
+      "ActionBuffProperties": {
+        "Buffs": [
+          6,
+          7,
+          3
+        ],
+        "ApplyDelay": 1.0,
+        "SecondaryBuffCount": 3,
+        "RandomBuffCount": 0
+      }
+    },
+    {
+      "ID": 1721,
+      "Name": "Gravity",
+      "Description": "2 x 100% (200%) magical damage (neutral) Hits all enemies - Base Damage is increased by 2 x 10% for every health and defense rating of the target",
+      "IsBaseAction": true,
+      "BaseActionProperties": {
+        "Tier": 6,
+        "Ultimate": true,
+        "Mana": 240,
+        "TargetType": 1,
+        "Duration": 3.8,
+        "IsDefaultAction": false,
+        "Tooltip": "",
+        "ParentAction": null,
+        "SpecialAttackAnimation": false,
+        "IsPotion": false
+      },
+      "IsActionModifier": true,
+      "ActionModifierProperties": {},
+      "IsActionDamage": true,
+      "ActionDamageProperties": {
+        "DamageMultiplicator": 1.0,
+        "TotalDamage": 2.0,
+        "CalculatedDamage": 1.8061372,
+        "CalculatedTotalDamage": 3.61227441,
+        "HitTimings": [
+          2.0,
+          3.0
+        ],
+        "Element": 0,
+        "Type": 1,
+        "FlashDuration": 0.4,
+        "MultipleEnemiesDelay": 0.2,
+        "CritDamageBonus": 0.0,
+        "DefenseBypass": 0.0,
+        "DefenseBypassBurnCondition": false,
+        "PlayHitAnimation": true,
+        "TriggersBleed": false,
+        "CannotBeDodged": false,
+        "TriggersAllShocks": false,
+        "LifestealAmount": 0.0,
+        "GravityMultiplier": 0.1,
+        "BuffMultiplier": 0.0
+      }
+    }
+  ],
+  "GoldReward": 45,
+  "RewardsCommon": [
+    {
+      "ID": 292,
+      "Name": "Smoke Bomb",
+      "Description": "Retreat out of combat",
+      "Icon": "",
+      "Price": 100,
+      "IsCombatConsumable": true,
+      "CombatConsumableProperties": {
+        "EffectAction": null,
+        "Icon": "icon_smoke_bomb",
+        "Description": "Retreat out of combat",
+        "RetreatItem": true
+      }
+    },
+    {
+      "ID": 284,
+      "Name": "Wool",
+      "Description": "Level 2 common upgrade material",
+      "Icon": "",
+      "Price": 200,
+      "IsCraftMaterial": true,
+      "CraftMaterialProperties": {
+        "Description": "Level 2 common upgrade material",
+        "Level": 2
+      }
+    }
+  ],
+  "RewardsRare": [
+    {
+      "ID": 278,
+      "Name": "Bronze",
+      "Description": "Level 2 rare upgrade material",
+      "Icon": "",
+      "Price": 400,
+      "IsCraftMaterial": true,
+      "CraftMaterialProperties": {
+        "Description": "Level 2 rare upgrade material",
+        "Level": 2
+      }
+    },
+    {
+      "ID": 799,
+      "Name": "Shuriken+3",
+      "Description": "Crit Chance +10%",
+      "Icon": "",
+      "Price": 1300,
+      "IsEquipment": true,
+      "EquipmentProperties": {
+        "Type": 0,
+        "Icon": "icon_shuriken",
+        "Attack": 110,
+        "Magic": 110,
+        "Defense": 0,
+        "CritChance": 0.1,
+        "CritDamage": 0.0,
+        "Health": 0,
+        "Mana": 0,
+        "ManaRegeneration": 0,
+        "DamageBonus": 0.0,
+        "NonCritDamage": 0.0,
+        "HealBonus": 0.0,
+        "ShieldBonus": 0.0,
+        "DodgeChance": 0.0,
+        "Unique": false,
+        "OnlyUnshifted": false,
+        "OnlyFamiliars": false,
+        "UpgradesTo": 1093,
+        "UpgradeMaterials": [
+          {
+            "Item": {
+              "ID": 283,
+              "Name": "Steel",
+              "Description": "Level 4 common upgrade material",
+              "Icon": "",
+              "Price": 350,
+              "IsCraftMaterial": true,
+              "CraftMaterialProperties": {
+                "Description": "Level 4 common upgrade material",
+                "Level": 4
+              }
+            },
+            "Quantity": 2
+          },
+          {
+            "Item": {
+              "ID": 802,
+              "Name": "Crimson Gem",
+              "Description": "Level 3 rare upgrade material",
+              "Icon": "",
+              "Price": 500,
+              "IsCraftMaterial": true,
+              "CraftMaterialProperties": {
+                "Description": "Level 3 rare upgrade material",
+                "Level": 3
+              }
+            },
+            "Quantity": 1
+          }
+        ],
+        "FullDefenseOffHand": false,
+        "IsInstrument": false
+      }
+    },
+    {
+      "ID": 665,
+      "Name": "Mogwai Egg",
+      "Description": "Consume to hatch: Mogwai",
+      "Icon": "",
+      "Price": 400,
+      "IsEgg": true,
+      "EggProperties": {
+        "Monster": 664
+      }
+    }
+  ],
+  "NoRareRewards": false,
+  "Appearances": [
+    {
+      "SceneName": "SnowyPeaks_East1",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_East2",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_East3",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_East4",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_East5",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_West1",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_West2",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_WestDark",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_West3",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_West4",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_WestMountain1",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_WestMountain2",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_WestMountain3",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_WestMountain4",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_WestMountain5",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_HighChallenge",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_WestMountain6",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_Bridge",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_WestMountain7",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_WestMountainSecret",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_EastMountain1",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_Lake",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_ChampionRoom",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_EastMountain2",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_EastDark",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_EastMountain3",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_EastMountainClothesmaker",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_EastMountain4",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_EastMountain5",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_ClothesmakerHouse",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_EastMountainTop",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_Cryomancer",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_SunPalaceEntrance",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_West5",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_ChampionRoom2",
+      "MapAreaName": "Snowy Peaks"
+    }
+  ]
+}

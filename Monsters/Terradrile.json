@@ -1,0 +1,2842 @@
+{
+  "InstanceID": -39482,
+  "ID": 1877,
+  "JournalNumber": 109,
+  "Name": "Terradrile",
+  "TypesName": "Ancient Worm",
+  "TypesArray": [
+    19,
+    17
+  ],
+  "IsSpectralFamiliar": false,
+  "ExploreAbilityName": "Levitate",
+  "ExploreAbilityDescription": "- Levitates big boulders",
+  "HasSonarAbility": false,
+  "BaseStats": {
+    "attack": 6,
+    "magic": 4,
+    "defense": 9,
+    "health": 4,
+    "mana": 4
+  },
+  "LightShiftStats": {
+    "attack": 0,
+    "magic": 0,
+    "defense": 1,
+    "health": 2,
+    "mana": 1
+  },
+  "DarkShiftStats": {
+    "attack": 2,
+    "magic": 2,
+    "defense": 0,
+    "health": 0,
+    "mana": 3
+  },
+  "LightShiftPassive": {
+    "ID": 912,
+    "Name": "Holy Presence",
+    "Description": "Aura: Every Buff, Shield or Heal action of an ally additionally applies one random Buff.",
+    "IsPassiveSkill": true,
+    "PassiveSkillProperties": {
+      "Description": "Every Buff, Shield or Heal action of an ally additionally applies one random Buff.",
+      "IsAura": true,
+      "IsUnique": false
+    },
+    "IsPassiveComboBuffing": true,
+    "PassiveComboBuffingProperties": {
+      "IsOnAllyActionStarted": true,
+      "AffectsHealsShields": true
+    }
+  },
+  "DarkShiftPassive": {
+    "ID": 927,
+    "Name": "Mana Conflux",
+    "Description": "Throughout combat, gain a Charge stack for every 75 Mana spent by any allied Monster.",
+    "IsPassiveSkill": true,
+    "PassiveSkillProperties": {
+      "OverlaySpecialBuff": {
+        "BuffType": 2,
+        "Name": "Charge",
+        "Icon": "charge",
+        "Description": "Increases Damage of the next attack by 3%",
+        "IsNegative": false
+      },
+      "Description": "Throughout combat, gain a Charge stack for every {0} Mana spent by any allied Monster.",
+      "IsAura": false,
+      "IsUnique": false
+    },
+    "IsPassiveManaConflux": true,
+    "PassiveManaConfluxProperties": {
+      "IsOnAllyManaSpent": true,
+      "StackPerManaSpent": 75
+    }
+  },
+  "BaseSkills": [
+    {
+      "ID": 465,
+      "Name": "Burrow",
+      "Description": "4 x 40% (160%) physical damage (earth) applies Barrier (Buff) to itself",
+      "IsBaseAction": true,
+      "BaseActionProperties": {
+        "Tier": 1,
+        "Ultimate": false,
+        "Mana": 55,
+        "TargetType": 0,
+        "Duration": 1.9,
+        "IsDefaultAction": false,
+        "Tooltip": "",
+        "ParentAction": null,
+        "SpecialAttackAnimation": true,
+        "IsPotion": false
+      },
+      "IsActionModifier": true,
+      "ActionModifierProperties": {},
+      "IsActionBuff": true,
+      "ActionBuffProperties": {
+        "Buffs": [
+          8
+        ],
+        "ApplyDelay": 1.6,
+        "SecondaryBuffCount": 3,
+        "RandomBuffCount": 0
+      },
+      "IsActionDamage": true,
+      "ActionDamageProperties": {
+        "DamageMultiplicator": 0.4,
+        "TotalDamage": 1.6,
+        "CalculatedDamage": 0.400000036,
+        "CalculatedTotalDamage": 1.60000014,
+        "HitTimings": [
+          0.3,
+          0.6,
+          0.9,
+          1.2
+        ],
+        "Element": 4,
+        "Type": 0,
+        "FlashDuration": 0.4,
+        "MultipleEnemiesDelay": 0.2,
+        "CritDamageBonus": 0.0,
+        "DefenseBypass": 0.0,
+        "DefenseBypassBurnCondition": false,
+        "PlayHitAnimation": true,
+        "TriggersBleed": false,
+        "CannotBeDodged": false,
+        "TriggersAllShocks": false,
+        "LifestealAmount": 0.0,
+        "GravityMultiplier": 0.0,
+        "BuffMultiplier": 0.0
+      }
+    },
+    {
+      "ID": 1988,
+      "Name": "Piercing Lightning",
+      "Description": "4 x 35% (140%) magical damage (wind) ignores 15% of the target's Defense damage reduction value",
+      "IsBaseAction": true,
+      "BaseActionProperties": {
+        "Tier": 1,
+        "Ultimate": false,
+        "Mana": 40,
+        "TargetType": 0,
+        "Duration": 2.1,
+        "IsDefaultAction": false,
+        "Tooltip": "",
+        "ParentAction": null,
+        "SpecialAttackAnimation": false,
+        "IsPotion": false
+      },
+      "IsActionModifier": true,
+      "ActionModifierProperties": {},
+      "IsActionDamage": true,
+      "ActionDamageProperties": {
+        "DamageMultiplicator": 0.35,
+        "TotalDamage": 1.4,
+        "CalculatedDamage": 0.375,
+        "CalculatedTotalDamage": 1.5,
+        "HitTimings": [
+          0.35,
+          0.85,
+          1.35,
+          1.85
+        ],
+        "Element": 3,
+        "Type": 1,
+        "FlashDuration": 0.4,
+        "MultipleEnemiesDelay": 0.2,
+        "CritDamageBonus": 0.0,
+        "DefenseBypass": 0.15,
+        "DefenseBypassBurnCondition": false,
+        "PlayHitAnimation": true,
+        "TriggersBleed": false,
+        "CannotBeDodged": false,
+        "TriggersAllShocks": false,
+        "LifestealAmount": 0.0,
+        "GravityMultiplier": 0.0,
+        "BuffMultiplier": 0.0
+      }
+    },
+    {
+      "ID": 115,
+      "Name": "Water Weakness",
+      "Description": "Water damage increased by 50%",
+      "IsPassiveSkill": true,
+      "PassiveSkillProperties": {
+        "Description": "Water damage increased by {50%}",
+        "IsAura": false,
+        "IsUnique": false
+      },
+      "IsPassiveElementModifier": true,
+      "PassiveElementModifierProperties": {
+        "Element": 2,
+        "Modifier": 0.5
+      }
+    },
+    {
+      "ID": 203,
+      "Name": "Wind Resistance",
+      "Description": "Wind damage reduced by 50%",
+      "IsPassiveSkill": true,
+      "PassiveSkillProperties": {
+        "Description": "Wind damage reduced by {50%}",
+        "IsAura": false,
+        "IsUnique": false
+      },
+      "IsPassiveElementModifier": true,
+      "PassiveElementModifierProperties": {
+        "Element": 3,
+        "Modifier": -0.5
+      }
+    }
+  ],
+  "SkillTrees": [
+    {
+      "Tier1Skills": [
+        {
+          "ID": 465,
+          "Name": "Burrow",
+          "Description": "4 x 40% (160%) physical damage (earth) applies Barrier (Buff) to itself",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 1,
+            "Ultimate": false,
+            "Mana": 55,
+            "TargetType": 0,
+            "Duration": 1.9,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": null,
+            "SpecialAttackAnimation": true,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionBuff": true,
+          "ActionBuffProperties": {
+            "Buffs": [
+              8
+            ],
+            "ApplyDelay": 1.6,
+            "SecondaryBuffCount": 3,
+            "RandomBuffCount": 0
+          },
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 0.4,
+            "TotalDamage": 1.6,
+            "CalculatedDamage": 0.400000036,
+            "CalculatedTotalDamage": 1.60000014,
+            "HitTimings": [
+              0.3,
+              0.6,
+              0.9,
+              1.2
+            ],
+            "Element": 4,
+            "Type": 0,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          }
+        }
+      ],
+      "Tier2Skills": [
+        {
+          "ID": 471,
+          "Name": "Burrow Lvl 2",
+          "Description": "4 x 50% (200%) physical damage (earth) applies Barrier (Buff) to itself",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 2,
+            "Ultimate": false,
+            "Mana": 75,
+            "TargetType": 0,
+            "Duration": 1.9,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 465,
+            "SpecialAttackAnimation": true,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionBuff": true,
+          "ActionBuffProperties": {
+            "Buffs": [
+              8
+            ],
+            "ApplyDelay": 1.6,
+            "SecondaryBuffCount": 3,
+            "RandomBuffCount": 0
+          },
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 0.5,
+            "TotalDamage": 2.0,
+            "CalculatedDamage": 0.51375,
+            "CalculatedTotalDamage": 2.055,
+            "HitTimings": [
+              0.3,
+              0.6,
+              0.9,
+              1.2
+            ],
+            "Element": 4,
+            "Type": 0,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          }
+        },
+        {
+          "ID": 207,
+          "Name": "Attack Plus",
+          "Description": "Improve Attack rating by 1 (Increases Attack by 26)",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStat": true,
+          "PassiveImproveStatProperties": {
+            "IsOnCalculateBaseStats": true,
+            "IsOnCalculateStats": true,
+            "Stat": 0,
+            "Value": 1.0,
+            "IsPercent": false,
+            "IsNegative": false
+          }
+        },
+        {
+          "ID": 955,
+          "Name": "Brawler",
+          "Description": "When exploiting an enemy's weakness with an attack, gain Might (Buff) and shield self by 75% of this monster's Attack value.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "OverlayBuffs": [
+              0
+            ],
+            "Description": "When exploiting an enemy's weakness with an attack, gain {Might} (Buff) and shield self by {0%} of this monster's Attack value.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveExploit": true,
+          "PassiveExploitProperties": {
+            "IsOnAllyCounterAttackHit": true,
+            "RandomBuff": false,
+            "Buff": 0,
+            "Shield": 0.75
+          }
+        },
+        {
+          "ID": 78,
+          "Name": "Health Plus",
+          "Description": "Improve Health rating by 1 (Increases Health by 332)",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStat": true,
+          "PassiveImproveStatProperties": {
+            "IsOnCalculateBaseStats": true,
+            "IsOnCalculateStats": true,
+            "Stat": 3,
+            "Value": 1.0,
+            "IsPercent": false,
+            "IsNegative": false
+          }
+        }
+      ],
+      "Tier3Skills": [
+        {
+          "ID": 472,
+          "Name": "Burrow Lvl 3",
+          "Description": "5 x 50% (250%) physical damage (earth) applies Barrier (Buff) to itself",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 3,
+            "Ultimate": false,
+            "Mana": 100,
+            "TargetType": 0,
+            "Duration": 2.1,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 471,
+            "SpecialAttackAnimation": true,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionBuff": true,
+          "ActionBuffProperties": {
+            "Buffs": [
+              8
+            ],
+            "ApplyDelay": 1.8,
+            "SecondaryBuffCount": 3,
+            "RandomBuffCount": 0
+          },
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 0.5,
+            "TotalDamage": 2.5,
+            "CalculatedDamage": 0.505199969,
+            "CalculatedTotalDamage": 2.52599978,
+            "HitTimings": [
+              0.3,
+              0.6,
+              0.9,
+              1.2,
+              1.5
+            ],
+            "Element": 4,
+            "Type": 0,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          }
+        },
+        {
+          "ID": 192,
+          "Name": "Earthquake",
+          "Description": "1 x 165% physical damage (earth) Hits all enemies",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 3,
+            "Ultimate": false,
+            "Mana": 110,
+            "TargetType": 1,
+            "Duration": 2.2,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": null,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 1.65,
+            "TotalDamage": 1.65,
+            "CalculatedDamage": 1.65805,
+            "CalculatedTotalDamage": 1.65805,
+            "HitTimings": [
+              1.5
+            ],
+            "Element": 4,
+            "Type": 0,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          }
+        },
+        {
+          "ID": 1099,
+          "Name": "Defense Overload",
+          "Description": "Increase Attack and Magic by 15% of this Monster's Defense.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "Increase Attack and Magic by {0%} of this Monster's Defense.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStatDependant": true,
+          "PassiveImproveStatDependantProperties": {
+            "IsOnCalculateStatsPostMultiplication": true,
+            "IsOnCalculateTeamMonsterStats": true,
+            "DependantStat": 2,
+            "IncreasedStat": 8,
+            "Value": 0.15,
+            "Pass": 1
+          }
+        },
+        {
+          "ID": 1947,
+          "Name": "Seismic Shocks",
+          "Description": "Every Earth attack hit has a 15% chance to apply Shock.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "OverlayDebuffs": [
+              1
+            ],
+            "Description": "Every Earth attack hit has a {0%} chance to apply {Shock}.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveDebuffChance": true,
+          "PassiveDebuffChanceProperties": {
+            "IsOnActionDamageHit": true,
+            "IsOnCounterAttackHit": true,
+            "Debuff": 1,
+            "Chance": 0.15,
+            "RestrictToElement": true,
+            "ElementRestriction": 4
+          }
+        },
+        {
+          "ID": 242,
+          "Name": "Defense Plus",
+          "Description": "Improve Defense rating by 1 (Increases Defense by 37)",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStat": true,
+          "PassiveImproveStatProperties": {
+            "IsOnCalculateBaseStats": true,
+            "IsOnCalculateStats": true,
+            "Stat": 2,
+            "Value": 1.0,
+            "IsPercent": false,
+            "IsNegative": false
+          }
+        }
+      ],
+      "Tier4Skills": [
+        {
+          "ID": 747,
+          "Name": "Burrow Lvl 4",
+          "Description": "5 x 65% (325%) physical damage (earth) applies Barrier (Buff) to itself",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 4,
+            "Ultimate": false,
+            "Mana": 140,
+            "TargetType": 0,
+            "Duration": 2.1,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 472,
+            "SpecialAttackAnimation": true,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionBuff": true,
+          "ActionBuffProperties": {
+            "Buffs": [
+              8
+            ],
+            "ApplyDelay": 1.8,
+            "SecondaryBuffCount": 3,
+            "RandomBuffCount": 0
+          },
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 0.65,
+            "TotalDamage": 3.25,
+            "CalculatedDamage": 0.66582495,
+            "CalculatedTotalDamage": 3.32912469,
+            "HitTimings": [
+              0.3,
+              0.6,
+              0.9,
+              1.2,
+              1.5
+            ],
+            "Element": 4,
+            "Type": 0,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          }
+        },
+        {
+          "ID": 748,
+          "Name": "Earthquake Lvl 2",
+          "Description": "2 x 100% (200%) physical damage (earth) Hits all enemies",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 4,
+            "Ultimate": false,
+            "Mana": 160,
+            "TargetType": 1,
+            "Duration": 2.3,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 192,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 1.0,
+            "TotalDamage": 2.0,
+            "CalculatedDamage": 1.01656365,
+            "CalculatedTotalDamage": 2.03312731,
+            "HitTimings": [
+              1.2,
+              1.7
+            ],
+            "Element": 4,
+            "Type": 0,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          }
+        },
+        {
+          "ID": 1944,
+          "Name": "Predation",
+          "Description": "When this Monster spends a turn without attacking, it gains a Predation stack.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "OverlaySpecialBuff": {
+              "BuffType": 12,
+              "Name": "Predation",
+              "Icon": "predation",
+              "Description": "Increases Critical Chance of the next attack by 20% and reduces enemy Dodge Chance by 10%",
+              "IsNegative": false
+            },
+            "Description": "When this Monster spends a turn without attacking, it gains a {Predation} stack.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassivePredation": true,
+          "PassivePredationProperties": {
+            "IsOnActionFinished": true
+          }
+        },
+        {
+          "ID": 467,
+          "Name": "Hibernate",
+          "Description": "If this Monster spends its turn without spending Mana, it regains 25% of its Max Health and gains Barrier (Buff).",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "OverlayBuffs": [
+              8
+            ],
+            "Description": "If this Monster spends its turn without spending Mana, it regains {0%} of its Max Health and gains {Barrier} (Buff).",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveHibernate": true,
+          "PassiveHibernateProperties": {
+            "IsOnActionFinished": true,
+            "HealthHealPercent": 0.25,
+            "Buff": 8
+          }
+        },
+        {
+          "ID": 227,
+          "Name": "Crit Chance Plus",
+          "Description": "+5% Critical Chance",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "+{0%} Critical Chance",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStat": true,
+          "PassiveImproveStatProperties": {
+            "IsOnCalculateBaseStats": true,
+            "IsOnCalculateStats": true,
+            "Stat": 5,
+            "Value": 0.05,
+            "IsPercent": false,
+            "IsNegative": false
+          }
+        }
+      ],
+      "Tier5Skills": [
+        {
+          "ID": 1200,
+          "Name": "Burrow Lvl 5",
+          "Description": "6 x 70% (420%) physical damage (earth) applies Barrier (Buff) to itself",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 5,
+            "Ultimate": false,
+            "Mana": 190,
+            "TargetType": 0,
+            "Duration": 2.4,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 747,
+            "SpecialAttackAnimation": true,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionBuff": true,
+          "ActionBuffProperties": {
+            "Buffs": [
+              8
+            ],
+            "ApplyDelay": 2.1,
+            "SecondaryBuffCount": 3,
+            "RandomBuffCount": 0
+          },
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 0.7,
+            "TotalDamage": 4.2,
+            "CalculatedDamage": 0.6818742,
+            "CalculatedTotalDamage": 4.091245,
+            "HitTimings": [
+              0.3,
+              0.6,
+              0.9,
+              1.2,
+              1.5,
+              1.8
+            ],
+            "Element": 4,
+            "Type": 0,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          }
+        },
+        {
+          "ID": 1202,
+          "Name": "Earthquake Lvl 3",
+          "Description": "3 x 85% (255%) physical damage (earth) Hits all enemies",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 5,
+            "Ultimate": false,
+            "Mana": 230,
+            "TargetType": 1,
+            "Duration": 2.7,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 748,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 0.85,
+            "TotalDamage": 2.55000019,
+            "CalculatedDamage": 0.86038655,
+            "CalculatedTotalDamage": 2.58115959,
+            "HitTimings": [
+              1.1,
+              1.6,
+              2.1
+            ],
+            "Element": 4,
+            "Type": 0,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          }
+        },
+        {
+          "ID": 623,
+          "Name": "Defense Focus",
+          "Description": "Defense from equipment increased by 25%.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "Defense from equipment increased by {0%}.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveEquipmentFocus": true,
+          "PassiveEquipmentFocusProperties": {
+            "Stat": 2,
+            "Bonus": 0.25
+          }
+        },
+        {
+          "ID": 1923,
+          "Name": "Tenacious Barrier",
+          "Description": "Unique Aura: Barrier also grants a 10% chance to resist the application of Debuffs and harmful Stacks.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "{Barrier} also grants a {0%} chance to resist the application of Debuffs and harmful Stacks.",
+            "IsAura": true,
+            "IsUnique": true
+          },
+          "IsPassiveTenaciousBarrier": true,
+          "PassiveTenaciousBarrierProperties": {
+            "ResistChance": 0.1
+          }
+        },
+        {
+          "ID": 207,
+          "Name": "Attack Plus",
+          "Description": "Improve Attack rating by 1 (Increases Attack by 26)",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStat": true,
+          "PassiveImproveStatProperties": {
+            "IsOnCalculateBaseStats": true,
+            "IsOnCalculateStats": true,
+            "Stat": 0,
+            "Value": 1.0,
+            "IsPercent": false,
+            "IsNegative": false
+          }
+        }
+      ]
+    },
+    {
+      "Tier1Skills": [
+        {
+          "ID": 1988,
+          "Name": "Piercing Lightning",
+          "Description": "4 x 35% (140%) magical damage (wind) ignores 15% of the target's Defense damage reduction value",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 1,
+            "Ultimate": false,
+            "Mana": 40,
+            "TargetType": 0,
+            "Duration": 2.1,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": null,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 0.35,
+            "TotalDamage": 1.4,
+            "CalculatedDamage": 0.375,
+            "CalculatedTotalDamage": 1.5,
+            "HitTimings": [
+              0.35,
+              0.85,
+              1.35,
+              1.85
+            ],
+            "Element": 3,
+            "Type": 1,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.15,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          }
+        }
+      ],
+      "Tier2Skills": [
+        {
+          "ID": 1989,
+          "Name": "Piercing Lightning Lvl 2",
+          "Description": "4 x 50% (200%) magical damage (wind) ignores 20% of the target's Defense damage reduction value",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 2,
+            "Ultimate": false,
+            "Mana": 70,
+            "TargetType": 0,
+            "Duration": 2.1,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 1988,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 0.5,
+            "TotalDamage": 2.0,
+            "CalculatedDamage": 0.5175,
+            "CalculatedTotalDamage": 2.07,
+            "HitTimings": [
+              0.35,
+              0.85,
+              1.35,
+              1.85
+            ],
+            "Element": 3,
+            "Type": 1,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.2,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          }
+        },
+        {
+          "ID": 523,
+          "Name": "Electric Field",
+          "Description": "When this Monster gets attacked, 50% chance to apply Shock on the attacker.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "OverlayDebuffs": [
+              1
+            ],
+            "Description": "When this Monster gets attacked, {0%} chance to apply {Shock} on the attacker.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveDebuffOnGettingHit": true,
+          "PassiveDebuffOnGettingHitProperties": {
+            "Debuff": 1,
+            "Chance": 0.5
+          }
+        },
+        {
+          "ID": 533,
+          "Name": "Multi Shock",
+          "Description": "Aura: Shock (Debuff) can be stacked two additional times on enemies. Additional stacks have only a 50% chance to trigger.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "{Shock} (Debuff) can be stacked two additional times on enemies. Additional stacks have only a {50%} chance to trigger.",
+            "IsAura": true,
+            "IsUnique": false
+          },
+          "IsPassiveIncreaseDebuffStacks": true,
+          "PassiveIncreaseDebuffStacksProperties": {
+            "stackCountIncrease": 2,
+            "Debuff": 1
+          }
+        },
+        {
+          "ID": 242,
+          "Name": "Defense Plus",
+          "Description": "Improve Defense rating by 1 (Increases Defense by 37)",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStat": true,
+          "PassiveImproveStatProperties": {
+            "IsOnCalculateBaseStats": true,
+            "IsOnCalculateStats": true,
+            "Stat": 2,
+            "Value": 1.0,
+            "IsPercent": false,
+            "IsNegative": false
+          }
+        }
+      ],
+      "Tier3Skills": [
+        {
+          "ID": 1990,
+          "Name": "Piercing Lightning Lvl 3",
+          "Description": "5 x 50% (250%) magical damage (wind) ignores 24% of the target's Defense damage reduction value",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 3,
+            "Ultimate": false,
+            "Mana": 110,
+            "TargetType": 0,
+            "Duration": 2.4,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 1989,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 0.5,
+            "TotalDamage": 2.5,
+            "CalculatedDamage": 0.542099953,
+            "CalculatedTotalDamage": 2.71049976,
+            "HitTimings": [
+              0.35,
+              0.8,
+              1.25,
+              1.7,
+              2.15
+            ],
+            "Element": 3,
+            "Type": 1,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.24,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          }
+        },
+        {
+          "ID": 355,
+          "Name": "Thunderstorm",
+          "Description": "1 x 160% magical damage (wind) Hits all enemies, 50% chance to apply Shock (Debuff)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 3,
+            "Ultimate": false,
+            "Mana": 120,
+            "TargetType": 1,
+            "Duration": 2.3,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": null,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 1.6,
+            "TotalDamage": 1.6,
+            "CalculatedDamage": 1.62354982,
+            "CalculatedTotalDamage": 1.62354982,
+            "HitTimings": [
+              1.3
+            ],
+            "Element": 3,
+            "Type": 1,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          },
+          "IsActionDebuff": true,
+          "ActionDebuffProperties": {
+            "Debuffs": [
+              1
+            ],
+            "ApplyDelay": 1.7,
+            "ApplyChance": 0.5,
+            "TargetCount": 1
+          }
+        },
+        {
+          "ID": 832,
+          "Name": "Magnetize",
+          "Description": "Unique Aura: Shock on enemies causes their attacks to have a 15% chance to be redirected to the Monster in your party with the highest Defense value.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "{Shock} on enemies causes their attacks to have a {0%} chance to be redirected to the Monster in your party with the highest Defense value.",
+            "IsAura": true,
+            "IsUnique": true
+          },
+          "IsPassiveMagnetize": true,
+          "PassiveMagnetizeProperties": {
+            "Chance": 0.15
+          }
+        },
+        {
+          "ID": 1333,
+          "Name": "Supercharged",
+          "Description": "As long as this Monster has 15 or more Charge stacks, its Magic is increased by 100% of its Attack.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "As long as this Monster has {0} or more {Charge} stacks, its Magic is increased by {1%} of its Attack.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveSupercharged": true,
+          "PassiveSuperchargedProperties": {
+            "IsOnCalculateStatsPostMultiplication": true,
+            "StacksRequired": 15,
+            "MagicBonus": 1.0
+          }
+        }
+      ],
+      "Tier4Skills": [
+        {
+          "ID": 1991,
+          "Name": "Piercing Lightning Lvl 4",
+          "Description": "5 x 65% (325%) magical damage (wind) ignores 27% of the target's Defense damage reduction value",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 4,
+            "Ultimate": false,
+            "Mana": 150,
+            "TargetType": 0,
+            "Duration": 2.4,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 1990,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 0.65,
+            "TotalDamage": 3.25,
+            "CalculatedDamage": 0.7077949,
+            "CalculatedTotalDamage": 3.53897452,
+            "HitTimings": [
+              0.35,
+              0.8,
+              1.25,
+              1.7,
+              2.15
+            ],
+            "Element": 3,
+            "Type": 1,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.27,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          }
+        },
+        {
+          "ID": 729,
+          "Name": "Thunderstorm Lvl 2",
+          "Description": "1 x 210% magical damage (wind) Hits all enemies, 50% chance to apply Shock (Debuff)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 4,
+            "Ultimate": false,
+            "Mana": 170,
+            "TargetType": 1,
+            "Duration": 2.3,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 355,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 2.1,
+            "TotalDamage": 2.1,
+            "CalculatedDamage": 2.12327719,
+            "CalculatedTotalDamage": 2.12327719,
+            "HitTimings": [
+              1.3
+            ],
+            "Element": 3,
+            "Type": 1,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          },
+          "IsActionDebuff": true,
+          "ActionDebuffProperties": {
+            "Debuffs": [
+              1
+            ],
+            "ApplyDelay": 1.7,
+            "ApplyChance": 0.5,
+            "TargetCount": 1
+          }
+        },
+        {
+          "ID": 117,
+          "Name": "Magic Plus",
+          "Description": "Improve Magic rating by 1 (Increases Magic by 26)",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStat": true,
+          "PassiveImproveStatProperties": {
+            "IsOnCalculateBaseStats": true,
+            "IsOnCalculateStats": true,
+            "Stat": 1,
+            "Value": 1.0,
+            "IsPercent": false,
+            "IsNegative": false
+          }
+        },
+        {
+          "ID": 321,
+          "Name": "Revenge",
+          "Description": "Every time this Monster takes a hit, it gains a Charge stack.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "OverlaySpecialBuff": {
+              "BuffType": 2,
+              "Name": "Charge",
+              "Icon": "charge",
+              "Description": "Increases Damage of the next attack by 3%",
+              "IsNegative": false
+            },
+            "Description": "Every time this Monster takes a hit, it gains a {Charge} stack.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveRevenge": true,
+          "PassiveRevengeProperties": {
+            "IsOnBeingHit": true
+          }
+        }
+      ],
+      "Tier5Skills": [
+        {
+          "ID": 1992,
+          "Name": "Piercing Lightning Lvl 5",
+          "Description": "6 x 70% (420%) magical damage (wind) ignores 30% of the target's Defense damage reduction value",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 5,
+            "Ultimate": false,
+            "Mana": 200,
+            "TargetType": 0,
+            "Duration": 2.6,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 1991,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 0.7,
+            "TotalDamage": 4.2,
+            "CalculatedDamage": 0.7461426,
+            "CalculatedTotalDamage": 4.47685575,
+            "HitTimings": [
+              0.35,
+              0.75,
+              1.15,
+              1.55,
+              1.95,
+              2.35
+            ],
+            "Element": 3,
+            "Type": 1,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.3,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          }
+        },
+        {
+          "ID": 1302,
+          "Name": "Thunderstorm Lvl 3",
+          "Description": "2 x 125% (250%) magical damage (wind) Hits all enemies, 50% chance to apply Shock (Debuff)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 5,
+            "Ultimate": false,
+            "Mana": 210,
+            "TargetType": 1,
+            "Duration": 2.8,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 729,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 1.25,
+            "TotalDamage": 2.5,
+            "CalculatedDamage": 1.24417746,
+            "CalculatedTotalDamage": 2.488355,
+            "HitTimings": [
+              1.3,
+              1.8
+            ],
+            "Element": 3,
+            "Type": 1,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          },
+          "IsActionDebuff": true,
+          "ActionDebuffProperties": {
+            "Debuffs": [
+              1
+            ],
+            "ApplyDelay": 2.2,
+            "ApplyChance": 0.5,
+            "TargetCount": 1
+          }
+        },
+        {
+          "ID": 1136,
+          "Name": "Stunned",
+          "Description": "Unique Aura: Shock (Debuff) also reduces enemy's Dodge Chance by 10% and their Critical Chance by 7%.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "{Shock} (Debuff) also reduces enemy's Dodge Chance by {0%} and their Critical Chance by {1%}.",
+            "IsAura": true,
+            "IsUnique": true
+          },
+          "IsPassiveStunned": true,
+          "PassiveStunnedProperties": {
+            "IsOnCalculateEnemyStats": true,
+            "ReduceDodgeValue": 0.1,
+            "ReduceCritValue": 0.07
+          }
+        },
+        {
+          "ID": 1842,
+          "Name": "Charged Anomaly",
+          "Description": "Aura: For every 12 Charge stacks spent by an ally, it applies Chill, Shock or Weakness to a random enemy.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "For every {0} {Charge} stacks spent by an ally, it applies {Chill}, {Shock} or {Weakness} to a random enemy.",
+            "IsAura": true,
+            "IsUnique": false
+          },
+          "IsPassiveChargingDebuffs": true,
+          "PassiveChargingDebuffsProperties": {
+            "IsOnAllyConsumeCharges": true,
+            "Debuffs": [
+              1,
+              0,
+              3
+            ],
+            "ChargeStacksNeeded": 12
+          }
+        }
+      ]
+    },
+    {
+      "Tier1Skills": [
+        {
+          "ID": 84,
+          "Name": "Shield",
+          "Description": "Shield all for 1 x (125 + 40% Defense)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 1,
+            "Ultimate": false,
+            "Mana": 40,
+            "TargetType": 4,
+            "Duration": 2.1,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": null,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionShield": true,
+          "ActionShieldProperties": {
+            "ShieldAmount": 125.0,
+            "ScaleDefense": 0.4,
+            "ScaleMagic": 0.0,
+            "ScaleAttack": 0.0,
+            "ScaleMana": 0.0,
+            "ScaleTargetHealth": 0.0,
+            "ShieldTimings": [
+              1.4
+            ],
+            "ShieldCaster": false
+          }
+        }
+      ],
+      "Tier2Skills": [
+        {
+          "ID": 190,
+          "Name": "Shield Lvl 2",
+          "Description": "Shield all for 1 x (200 + 45% Defense)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 1,
+            "Ultimate": false,
+            "Mana": 70,
+            "TargetType": 4,
+            "Duration": 2.1,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 84,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionShield": true,
+          "ActionShieldProperties": {
+            "ShieldAmount": 200.0,
+            "ScaleDefense": 0.45,
+            "ScaleMagic": 0.0,
+            "ScaleAttack": 0.0,
+            "ScaleMana": 0.0,
+            "ScaleTargetHealth": 0.0,
+            "ShieldTimings": [
+              1.4
+            ],
+            "ShieldCaster": false
+          }
+        },
+        {
+          "ID": 1926,
+          "Name": "Bitumen Surge",
+          "Description": "1 x 130% magical damage (earth) Hits all enemies, applies a stack of Tether.",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 2,
+            "Ultimate": false,
+            "Mana": 90,
+            "TargetType": 1,
+            "Duration": 2.4,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": null,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 1.3,
+            "TotalDamage": 1.3,
+            "CalculatedDamage": 1.30849993,
+            "CalculatedTotalDamage": 1.30849993,
+            "HitTimings": [
+              1.2
+            ],
+            "Element": 4,
+            "Type": 1,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          },
+          "IsActionSpecialBuff": true,
+          "ActionSpecialBuffProperties": {
+            "Buff": 9,
+            "DoubleBuff": false,
+            "Buff2": 0,
+            "StackCount": 1,
+            "ApplyDelay": 1.8,
+            "ApplyChance": 1.0,
+            "Variable": 0.0,
+            "TypeRestriction": 0
+          }
+        },
+        {
+          "ID": 1111,
+          "Name": "Barricade",
+          "Description": "Every shield that comes from this Monster (active and passive) has a 4% chance to apply Barrier (Buff).",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "OverlayBuffs": [
+              8
+            ],
+            "Description": "Every shield that comes from this Monster (active and passive) has a {0%} chance to apply {Barrier} (Buff). ",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveBarricade": true,
+          "PassiveBarricadeProperties": {
+            "IsOnApplyShield": true,
+            "Chance": 0.04,
+            "Buff": 8
+          }
+        },
+        {
+          "ID": 78,
+          "Name": "Health Plus",
+          "Description": "Improve Health rating by 1 (Increases Health by 332)",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStat": true,
+          "PassiveImproveStatProperties": {
+            "IsOnCalculateBaseStats": true,
+            "IsOnCalculateStats": true,
+            "Stat": 3,
+            "Value": 1.0,
+            "IsPercent": false,
+            "IsNegative": false
+          }
+        }
+      ],
+      "Tier3Skills": [
+        {
+          "ID": 103,
+          "Name": "Shield Lvl 3",
+          "Description": "Shield all for 1 x (350 + 50% Defense)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 1,
+            "Ultimate": false,
+            "Mana": 110,
+            "TargetType": 4,
+            "Duration": 2.1,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 190,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionShield": true,
+          "ActionShieldProperties": {
+            "ShieldAmount": 350.0,
+            "ScaleDefense": 0.5,
+            "ScaleMagic": 0.0,
+            "ScaleAttack": 0.0,
+            "ScaleMana": 0.0,
+            "ScaleTargetHealth": 0.0,
+            "ShieldTimings": [
+              1.4
+            ],
+            "ShieldCaster": false
+          }
+        },
+        {
+          "ID": 1927,
+          "Name": "Bitumen Surge Lvl 2",
+          "Description": "2 x 75% (150%) magical damage (earth) Hits all enemies, applies a stack of Tether.",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 3,
+            "Ultimate": false,
+            "Mana": 120,
+            "TargetType": 1,
+            "Duration": 2.8,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 1926,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 0.75,
+            "TotalDamage": 1.5,
+            "CalculatedDamage": 0.75789994,
+            "CalculatedTotalDamage": 1.51579988,
+            "HitTimings": [
+              1.1,
+              1.7
+            ],
+            "Element": 4,
+            "Type": 1,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          },
+          "IsActionSpecialBuff": true,
+          "ActionSpecialBuffProperties": {
+            "Buff": 9,
+            "DoubleBuff": false,
+            "Buff2": 0,
+            "StackCount": 1,
+            "ApplyDelay": 2.3,
+            "ApplyChance": 1.0,
+            "Variable": 0.0,
+            "TypeRestriction": 0
+          }
+        },
+        {
+          "ID": 1847,
+          "Name": "Load Up",
+          "Description": "Shield actions apply 1 Charge stack per shield. Passive shields have a 20% chance to apply 1 Charge stack.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "OverlaySpecialBuff": {
+              "BuffType": 2,
+              "Name": "Charge",
+              "Icon": "charge",
+              "Description": "Increases Damage of the next attack by 3%",
+              "IsNegative": false
+            },
+            "Description": "Shield actions apply {1} {Charge} stack per shield. Passive shields have a {0%} chance to apply {1} {Charge} stack.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveLoadUp": true,
+          "PassiveLoadUpProperties": {
+            "IsOnActionShieldTarget": true,
+            "IsOnApplyShield": true,
+            "PassiveChance": 0.2,
+            "ChargeStacks": 1
+          }
+        },
+        {
+          "ID": 385,
+          "Name": "Defense Proc",
+          "Description": "Every attack triggers an additional hit equal to 50% of Defense value.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "Every attack triggers an additional hit equal to {1%} of Defense value.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveComboMaster": true,
+          "PassiveComboMasterProperties": {
+            "IsOnAllyActionDamageStarted": true,
+            "DamageValue": 0.0,
+            "StatScaling": 0.5,
+            "ScaleStat": 2,
+            "AnimElement": null,
+            "ElementRestriction": 8,
+            "TypeRestriction": 0
+          }
+        }
+      ],
+      "Tier4Skills": [
+        {
+          "ID": 628,
+          "Name": "Shield Lvl 4",
+          "Description": "Shield all for 2 x (250 + 25% Defense)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 1,
+            "Ultimate": false,
+            "Mana": 150,
+            "TargetType": 4,
+            "Duration": 2.3,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 103,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionShield": true,
+          "ActionShieldProperties": {
+            "ShieldAmount": 250.0,
+            "ScaleDefense": 0.25,
+            "ScaleMagic": 0.0,
+            "ScaleAttack": 0.0,
+            "ScaleMana": 0.0,
+            "ScaleTargetHealth": 0.0,
+            "ShieldTimings": [
+              1.2,
+              1.7
+            ],
+            "ShieldCaster": false
+          }
+        },
+        {
+          "ID": 1928,
+          "Name": "Bitumen Surge Lvl 3",
+          "Description": "2 x 100% (200%) magical damage (earth) Hits all enemies, applies a stack of Tether.",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 4,
+            "Ultimate": false,
+            "Mana": 165,
+            "TargetType": 1,
+            "Duration": 2.8,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 1927,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 1.0,
+            "TotalDamage": 2.0,
+            "CalculatedDamage": 1.00160122,
+            "CalculatedTotalDamage": 2.00320244,
+            "HitTimings": [
+              1.1,
+              1.7
+            ],
+            "Element": 4,
+            "Type": 1,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          },
+          "IsActionSpecialBuff": true,
+          "ActionSpecialBuffProperties": {
+            "Buff": 9,
+            "DoubleBuff": false,
+            "Buff2": 0,
+            "StackCount": 1,
+            "ApplyDelay": 2.3,
+            "ApplyChance": 1.0,
+            "Variable": 0.0,
+            "TypeRestriction": 0
+          }
+        },
+        {
+          "ID": 1544,
+          "Name": "Critical Base",
+          "Description": "Increases Critical Chance by 15% while wearing no equipment that increases Critical Chance.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "Increases {Critical Chance} by {0%} while wearing no equipment that increases {Critical Chance}.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveCriticalBase": true,
+          "PassiveCriticalBaseProperties": {
+            "IsOnCalculateStats": true,
+            "Bonus": 0.15
+          }
+        },
+        {
+          "ID": 212,
+          "Name": "Copy Shield",
+          "Description": "When Shielding yourself, also apply 20% of that Shield to allies.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "When Shielding yourself, also apply {0%} of that Shield to allies.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveCopyShield": true,
+          "PassiveCopyShieldProperties": {
+            "IsOnReceiveShield": true,
+            "CopyAmount": 0.2
+          }
+        }
+      ],
+      "Tier5Skills": [
+        {
+          "ID": 1272,
+          "Name": "Shield Lvl 5",
+          "Description": "Shield all for 3 x (250 + 20% Defense)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 1,
+            "Ultimate": false,
+            "Mana": 200,
+            "TargetType": 4,
+            "Duration": 2.7,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 628,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionShield": true,
+          "ActionShieldProperties": {
+            "ShieldAmount": 250.0,
+            "ScaleDefense": 0.2,
+            "ScaleMagic": 0.0,
+            "ScaleAttack": 0.0,
+            "ScaleMana": 0.0,
+            "ScaleTargetHealth": 0.0,
+            "ShieldTimings": [
+              1.1,
+              1.6,
+              2.1
+            ],
+            "ShieldCaster": false
+          }
+        },
+        {
+          "ID": 1929,
+          "Name": "Bitumen Surge Lvl 4",
+          "Description": "2 x 130% (260%) magical damage (earth) Hits all enemies, applies 2 stacks of Tether.",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 5,
+            "Ultimate": false,
+            "Mana": 220,
+            "TargetType": 1,
+            "Duration": 2.8,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 1928,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 1.3,
+            "TotalDamage": 2.6,
+            "CalculatedDamage": 1.26917744,
+            "CalculatedTotalDamage": 2.53835487,
+            "HitTimings": [
+              1.1,
+              1.7
+            ],
+            "Element": 4,
+            "Type": 1,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          },
+          "IsActionSpecialBuff": true,
+          "ActionSpecialBuffProperties": {
+            "Buff": 9,
+            "DoubleBuff": false,
+            "Buff2": 0,
+            "StackCount": 2,
+            "ApplyDelay": 2.3,
+            "ApplyChance": 1.0,
+            "Variable": 0.0,
+            "TypeRestriction": 0
+          }
+        },
+        {
+          "ID": 1414,
+          "Name": "Volatile Shield",
+          "Description": "Every attack consumes 50% of the current shield to do an additional hit equal to 175% of that value.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "Every attack consumes {0%} of the current shield to do an additional hit equal to {1%} of that value.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveVolatileShield": true,
+          "PassiveVolatileShieldProperties": {
+            "IsOnActionDamageStarted": true,
+            "ShieldConsume": 0.5,
+            "Multiplier": 1.75,
+            "AnimElementProjectile": null,
+            "AnimElementImpact": null
+          }
+        },
+        {
+          "ID": 1946,
+          "Name": "Ancient Restoration",
+          "Description": "Aura: At the beginning of each turn, remove a random Debuff from Ancients in the party. They start combat with Age.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "OverlaySpecialBuff": {
+              "BuffType": 7,
+              "Name": "Age",
+              "Icon": "age",
+              "Description": "+3% Damage, +3% Damage Reduction, +3% Mana Regeneration",
+              "IsNegative": false
+            },
+            "Description": "At the beginning of each turn, remove a random Debuff from {Ancients} in the party. They start combat with {Age}.",
+            "IsAura": true,
+            "IsUnique": false
+          },
+          "IsPassiveAntitoxin": true,
+          "PassiveAntitoxinProperties": {
+            "IsOnMonsterUpkeep": true,
+            "IsOnAllyMonsterUpkeep": true,
+            "IsOnCombatStart": true,
+            "IsOnAllyCombatStart": true,
+            "TypeRestriction": 19,
+            "GrantsAgeStack": true
+          }
+        }
+      ]
+    },
+    {
+      "Tier1Skills": [],
+      "Tier2Skills": [
+        {
+          "ID": 171,
+          "Name": "Barrier",
+          "Description": "Applies Barrier (Buff) to whole party",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 1,
+            "Ultimate": false,
+            "Mana": 60,
+            "TargetType": 4,
+            "Duration": 1.5,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": null,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionBuff": true,
+          "ActionBuffProperties": {
+            "Buffs": [
+              8
+            ],
+            "ApplyDelay": 1.0,
+            "SecondaryBuffCount": 3,
+            "RandomBuffCount": 0
+          }
+        }
+      ],
+      "Tier3Skills": [
+        {
+          "ID": 1931,
+          "Name": "Magnitude",
+          "Description": "Applies Barrier (Buff) to whole party Applies Glory (Buff) to a random Monster.",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 1,
+            "Ultimate": false,
+            "Mana": 90,
+            "TargetType": 4,
+            "Duration": 1.7,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 171,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionBuff": true,
+          "ActionBuffProperties": {
+            "Buffs": [
+              8,
+              2
+            ],
+            "ApplyDelay": 0.8,
+            "SecondaryBuffCount": 1,
+            "RandomBuffCount": 0
+          }
+        },
+        {
+          "ID": 547,
+          "Name": "Buff Charging",
+          "Description": "When this Monster applies a Buff, it gains a Charge stack.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "OverlaySpecialBuff": {
+              "BuffType": 2,
+              "Name": "Charge",
+              "Icon": "charge",
+              "Description": "Increases Damage of the next attack by 3%",
+              "IsNegative": false
+            },
+            "Description": "When this Monster applies a Buff, it gains a {Charge} stack.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveBuffCharging": true,
+          "PassiveBuffChargingProperties": {
+            "IsOnApplyBuff": true
+          }
+        },
+        {
+          "ID": 175,
+          "Name": "Mana Plus",
+          "Description": "Improve Mana rating by 1 (Increases Mana by 20. Increases Mana Regeneration by 10)",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStat": true,
+          "PassiveImproveStatProperties": {
+            "IsOnCalculateBaseStats": true,
+            "IsOnCalculateStats": true,
+            "Stat": 4,
+            "Value": 1.0,
+            "IsPercent": false,
+            "IsNegative": false
+          }
+        }
+      ],
+      "Tier4Skills": [
+        {
+          "ID": 1932,
+          "Name": "Magnitude Lvl 2",
+          "Description": "Applies Barrier (Buff) to whole party Applies Glory (Buff) to two random Monsters.",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 1,
+            "Ultimate": false,
+            "Mana": 120,
+            "TargetType": 4,
+            "Duration": 1.7,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 1931,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionBuff": true,
+          "ActionBuffProperties": {
+            "Buffs": [
+              8,
+              2
+            ],
+            "ApplyDelay": 0.8,
+            "SecondaryBuffCount": 2,
+            "RandomBuffCount": 0
+          }
+        },
+        {
+          "ID": 128,
+          "Name": "Buffing Shield",
+          "Description": "When applying a Buff, also apply a Shield equal to 30% of this Monster's Defense.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "When applying a Buff, also apply a Shield equal to {0%} of this Monster's Defense. ",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveBuffingShield": true,
+          "PassiveBuffingShieldProperties": {
+            "IsOnApplyBuff": true,
+            "ShieldAmount": 0.3
+          }
+        },
+        {
+          "ID": 78,
+          "Name": "Health Plus",
+          "Description": "Improve Health rating by 1 (Increases Health by 332)",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStat": true,
+          "PassiveImproveStatProperties": {
+            "IsOnCalculateBaseStats": true,
+            "IsOnCalculateStats": true,
+            "Stat": 3,
+            "Value": 1.0,
+            "IsPercent": false,
+            "IsNegative": false
+          }
+        },
+        {
+          "ID": 242,
+          "Name": "Defense Plus",
+          "Description": "Improve Defense rating by 1 (Increases Defense by 37)",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStat": true,
+          "PassiveImproveStatProperties": {
+            "IsOnCalculateBaseStats": true,
+            "IsOnCalculateStats": true,
+            "Stat": 2,
+            "Value": 1.0,
+            "IsPercent": false,
+            "IsNegative": false
+          }
+        }
+      ],
+      "Tier5Skills": [
+        {
+          "ID": 1933,
+          "Name": "Magnitude Lvl 3",
+          "Description": "Applies Barrier & Glory (Buffs) to whole party",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 1,
+            "Ultimate": false,
+            "Mana": 160,
+            "TargetType": 4,
+            "Duration": 1.8,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 1932,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionBuff": true,
+          "ActionBuffProperties": {
+            "Buffs": [
+              8,
+              2
+            ],
+            "ApplyDelay": 0.8,
+            "SecondaryBuffCount": 3,
+            "RandomBuffCount": 0
+          }
+        },
+        {
+          "ID": 473,
+          "Name": "Multi Barrier",
+          "Description": "Aura: Barrier (Buff) can be stacked two additional times. Additional stacks are only half as strong.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "{Barrier} (Buff) can be stacked two additional times. Additional stacks are only half as strong.",
+            "IsAura": true,
+            "IsUnique": false
+          },
+          "IsPassiveIncreaseBuffStacks": true,
+          "PassiveIncreaseBuffStacksProperties": {
+            "stackCountIncrease": 2,
+            "Buff": 8,
+            "DuoBuff": false,
+            "Buff2": 0
+          }
+        },
+        {
+          "ID": 98,
+          "Name": "Combo Buffing",
+          "Description": "Every Buff action applies one additional random Buff.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "Every Buff action applies one additional random Buff.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveComboBuffing": true,
+          "PassiveComboBuffingProperties": {
+            "IsOnAllyActionStarted": true,
+            "AffectsHealsShields": false
+          }
+        },
+        {
+          "ID": 175,
+          "Name": "Mana Plus",
+          "Description": "Improve Mana rating by 1 (Increases Mana by 20. Increases Mana Regeneration by 10)",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStat": true,
+          "PassiveImproveStatProperties": {
+            "IsOnCalculateBaseStats": true,
+            "IsOnCalculateStats": true,
+            "Stat": 4,
+            "Value": 1.0,
+            "IsPercent": false,
+            "IsNegative": false
+          }
+        }
+      ]
+    }
+  ],
+  "Ultimates": [
+    {
+      "ID": 1752,
+      "Name": "Gigadrill",
+      "Description": "6 x 100% (600%) physical damage (neutral) Applies Armor Break (Debuff) applies Might & Barrier (Buffs) to itself",
+      "IsBaseAction": true,
+      "BaseActionProperties": {
+        "Tier": 6,
+        "Ultimate": true,
+        "Mana": 230,
+        "TargetType": 0,
+        "Duration": 3.5,
+        "IsDefaultAction": false,
+        "Tooltip": "",
+        "ParentAction": null,
+        "SpecialAttackAnimation": false,
+        "IsPotion": false
+      },
+      "IsActionModifier": true,
+      "ActionModifierProperties": {},
+      "IsActionBuff": true,
+      "ActionBuffProperties": {
+        "Buffs": [
+          0,
+          8
+        ],
+        "ApplyDelay": 2.8,
+        "SecondaryBuffCount": 3,
+        "RandomBuffCount": 0
+      },
+      "IsActionDamage": true,
+      "ActionDamageProperties": {
+        "DamageMultiplicator": 1.0,
+        "TotalDamage": 6.0,
+        "CalculatedDamage": 0.955985546,
+        "CalculatedTotalDamage": 5.73591328,
+        "HitTimings": [
+          0.7,
+          1.0,
+          1.3,
+          1.6,
+          1.9,
+          2.2
+        ],
+        "Element": 0,
+        "Type": 0,
+        "FlashDuration": 0.4,
+        "MultipleEnemiesDelay": 0.2,
+        "CritDamageBonus": 0.0,
+        "DefenseBypass": 0.0,
+        "DefenseBypassBurnCondition": false,
+        "PlayHitAnimation": true,
+        "TriggersBleed": false,
+        "CannotBeDodged": false,
+        "TriggersAllShocks": false,
+        "LifestealAmount": 0.0,
+        "GravityMultiplier": 0.0,
+        "BuffMultiplier": 0.0
+      },
+      "IsActionDebuff": true,
+      "ActionDebuffProperties": {
+        "Debuffs": [
+          5
+        ],
+        "ApplyDelay": 2.5,
+        "ApplyChance": 1.0,
+        "TargetCount": 1
+      }
+    },
+    {
+      "ID": 1820,
+      "Name": "Electric Surge",
+      "Description": "2 x 150% (300%) physical damage (wind) Hits all enemies Shield all allies for 1 x (500 + 25% Defense + 25% Attack), 50% chance to apply Shock (Debuff)",
+      "IsBaseAction": true,
+      "BaseActionProperties": {
+        "Tier": 6,
+        "Ultimate": true,
+        "Mana": 230,
+        "TargetType": 1,
+        "Duration": 4.0,
+        "IsDefaultAction": false,
+        "Tooltip": "",
+        "ParentAction": null,
+        "SpecialAttackAnimation": false,
+        "IsPotion": false
+      },
+      "IsActionModifier": true,
+      "ActionModifierProperties": {},
+      "IsActionDamage": true,
+      "ActionDamageProperties": {
+        "DamageMultiplicator": 1.5,
+        "TotalDamage": 3.0,
+        "CalculatedDamage": 1.51751912,
+        "CalculatedTotalDamage": 3.03503823,
+        "HitTimings": [
+          2.3,
+          2.55
+        ],
+        "Element": 3,
+        "Type": 0,
+        "FlashDuration": 0.4,
+        "MultipleEnemiesDelay": 0.5,
+        "CritDamageBonus": 0.0,
+        "DefenseBypass": 0.0,
+        "DefenseBypassBurnCondition": false,
+        "PlayHitAnimation": true,
+        "TriggersBleed": false,
+        "CannotBeDodged": false,
+        "TriggersAllShocks": false,
+        "LifestealAmount": 0.0,
+        "GravityMultiplier": 0.0,
+        "BuffMultiplier": 0.0
+      },
+      "IsActionDebuff": true,
+      "ActionDebuffProperties": {
+        "Debuffs": [
+          1
+        ],
+        "ApplyDelay": 3.5,
+        "ApplyChance": 0.5,
+        "TargetCount": 1
+      },
+      "IsActionShield": true,
+      "ActionShieldProperties": {
+        "ShieldAmount": 500.0,
+        "ScaleDefense": 0.25,
+        "ScaleMagic": 0.0,
+        "ScaleAttack": 0.25,
+        "ScaleMana": 0.0,
+        "ScaleTargetHealth": 0.0,
+        "ShieldTimings": [
+          0.8
+        ],
+        "ShieldCaster": false
+      }
+    },
+    {
+      "ID": 1930,
+      "Name": "Ancient Conjunction",
+      "Description": "Shield all for 2 x (400 + 60% Defense) Applies Barrier (Buff) to whole party applies a stack of Age to Ancients.",
+      "IsBaseAction": true,
+      "BaseActionProperties": {
+        "Tier": 5,
+        "Ultimate": true,
+        "Mana": 220,
+        "TargetType": 4,
+        "Duration": 3.6,
+        "IsDefaultAction": false,
+        "Tooltip": "",
+        "ParentAction": null,
+        "SpecialAttackAnimation": false,
+        "IsPotion": false
+      },
+      "IsActionModifier": true,
+      "ActionModifierProperties": {},
+      "IsActionBuff": true,
+      "ActionBuffProperties": {
+        "Buffs": [
+          8
+        ],
+        "ApplyDelay": 2.5,
+        "SecondaryBuffCount": 3,
+        "RandomBuffCount": 0
+      },
+      "IsActionShield": true,
+      "ActionShieldProperties": {
+        "ShieldAmount": 400.0,
+        "ScaleDefense": 0.6,
+        "ScaleMagic": 0.0,
+        "ScaleAttack": 0.0,
+        "ScaleMana": 0.0,
+        "ScaleTargetHealth": 0.0,
+        "ShieldTimings": [
+          1.3,
+          1.9
+        ],
+        "ShieldCaster": false
+      },
+      "IsActionSpecialBuff": true,
+      "ActionSpecialBuffProperties": {
+        "Buff": 7,
+        "DoubleBuff": false,
+        "Buff2": 0,
+        "StackCount": 1,
+        "ApplyDelay": 3.1,
+        "ApplyChance": 1.0,
+        "Variable": 0.0,
+        "TypeRestriction": 19
+      }
+    }
+  ],
+  "GoldReward": 47,
+  "RewardsCommon": [
+    {
+      "ID": 282,
+      "Name": "Silver",
+      "Description": "Level 4 rare upgrade material",
+      "Icon": "",
+      "Price": 750,
+      "IsCraftMaterial": true,
+      "CraftMaterialProperties": {
+        "Description": "Level 4 rare upgrade material",
+        "Level": 4
+      }
+    },
+    {
+      "ID": 1426,
+      "Name": "Gold",
+      "Description": "Level 5 rare upgrade material",
+      "Icon": "",
+      "Price": 1200,
+      "IsCraftMaterial": true,
+      "CraftMaterialProperties": {
+        "Description": "Level 5 rare upgrade material",
+        "Level": 5
+      }
+    }
+  ],
+  "RewardsRare": [
+    {
+      "ID": 867,
+      "Name": "Shift Stone",
+      "Description": "Changes a Monster to dark-shifted or light-shifted variation",
+      "Icon": "",
+      "Price": 5000,
+      "IsConsumable": true,
+      "ConsumableProperties": {
+        "Icon": "icon_shift_stone",
+        "Description": "Changes a Monster to dark-shifted or light-shifted variation"
+      },
+      "IsShiftStone": true,
+      "ShiftStoneProperties": {
+        "StoneType": 0
+      }
+    },
+    {
+      "ID": 1886,
+      "Name": "Tambourine",
+      "Description": "Health +90 Crit Chance +2% Healing skills (active and passive) increased by 5% ",
+      "Icon": "",
+      "Price": 2000,
+      "IsEquipment": true,
+      "EquipmentProperties": {
+        "Type": 5,
+        "Icon": "icon_tambourine",
+        "Attack": 0,
+        "Magic": 0,
+        "Defense": 0,
+        "CritChance": 0.02,
+        "CritDamage": 0.0,
+        "Health": 90,
+        "Mana": 0,
+        "ManaRegeneration": 0,
+        "DamageBonus": 0.0,
+        "NonCritDamage": 0.0,
+        "HealBonus": 0.05,
+        "ShieldBonus": 0.0,
+        "DodgeChance": 0.0,
+        "Unique": true,
+        "OnlyUnshifted": false,
+        "OnlyFamiliars": false,
+        "UpgradesTo": 1887,
+        "UpgradeMaterials": [
+          {
+            "Item": {
+              "ID": 45,
+              "Name": "Green Gem",
+              "Description": "Level 1 rare upgrade material",
+              "Icon": "",
+              "Price": 250,
+              "IsCraftMaterial": true,
+              "CraftMaterialProperties": {
+                "Description": "Level 1 rare upgrade material",
+                "Level": 1
+              }
+            },
+            "Quantity": 1
+          },
+          {
+            "Item": {
+              "ID": 50,
+              "Name": "Red Gem",
+              "Description": "Level 1 rare upgrade material",
+              "Icon": "",
+              "Price": 250,
+              "IsCraftMaterial": true,
+              "CraftMaterialProperties": {
+                "Description": "Level 1 rare upgrade material",
+                "Level": 1
+              }
+            },
+            "Quantity": 1
+          }
+        ],
+        "FullDefenseOffHand": false,
+        "IsInstrument": true
+      }
+    },
+    {
+      "ID": 1940,
+      "Name": "Terradrile Egg",
+      "Description": "Consume to hatch: Terradrile",
+      "Icon": "",
+      "Price": 800,
+      "IsEgg": true,
+      "EggProperties": {
+        "Monster": 1877
+      }
+    }
+  ],
+  "NoRareRewards": false,
+  "Appearances": [
+    {
+      "SceneName": "ForgottenWorld_Fall2",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_WandererRoom",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_ForgottenWorldIntro",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_WorldTree",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_Jungle6",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_Jungle5",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_Climb1",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_ClimbSide",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_Climb2",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_Climb3",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_Caves1",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_JungleHidden",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_Jungle2",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_Jungle3",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_Jungle1",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_TarPitsHidden1",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_Climb4",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_Waters1",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_Caves3",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_Caves2",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_Caves5",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_Caves4",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_Caves6",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_Caves7",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_MCPath1",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_JungleShortcut",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_Jungle4",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_TarPits1",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_Caves8",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_Caves9",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_Caves10",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_Caves11",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_TerradrileLair1",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_TerradrileLair2",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_DracomerLair",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_Waters2",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_Waters4",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_Waters3",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_Waters5",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_Caves12",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_DarkRoom",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_TarPits2",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_TarPits7",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_TarPits8",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_ClimbPuzzle",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_WatersHidden",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_TarPits4",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_TarPits3",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_TarPits5",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_MCPath2",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_MCPath3",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_TarPits6",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_Climb5",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_CavesStudy",
+      "MapAreaName": "Forgotten World"
+    },
+    {
+      "SceneName": "ForgottenWorld_TarPits9",
+      "MapAreaName": "Forgotten World"
+    }
+  ]
+}

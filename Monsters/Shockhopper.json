@@ -1,0 +1,3158 @@
+{
+  "InstanceID": -34160,
+  "ID": 1398,
+  "JournalNumber": 75,
+  "Name": "Shockhopper",
+  "TypesName": "Bird Mage",
+  "TypesArray": [
+    12,
+    16
+  ],
+  "IsSpectralFamiliar": false,
+  "ExploreAbilityName": "Shock Freeze",
+  "ExploreAbilityDescription": "- Activates ice orbs - Activates lightning orbs",
+  "HasSonarAbility": false,
+  "BaseStats": {
+    "attack": 1,
+    "magic": 8,
+    "defense": 4,
+    "health": 4,
+    "mana": 6
+  },
+  "LightShiftStats": {
+    "attack": 0,
+    "magic": 0,
+    "defense": 1,
+    "health": 2,
+    "mana": 1
+  },
+  "DarkShiftStats": {
+    "attack": 0,
+    "magic": 2,
+    "defense": 0,
+    "health": 0,
+    "mana": 2
+  },
+  "LightShiftPassive": {
+    "ID": 1396,
+    "Name": "Curse Breaker",
+    "Description": "Aura: At the start of the turn, remove a Debuff from each Monster in the party.",
+    "IsPassiveSkill": true,
+    "PassiveSkillProperties": {
+      "Description": "At the start of the turn, remove a Debuff from each Monster in the party.",
+      "IsAura": true,
+      "IsUnique": false
+    },
+    "IsPassiveAntitoxin": true,
+    "PassiveAntitoxinProperties": {
+      "IsOnMonsterUpkeep": true,
+      "IsOnAllyMonsterUpkeep": true,
+      "IsOnCombatStart": true,
+      "IsOnAllyCombatStart": true,
+      "TypeRestriction": 0,
+      "GrantsAgeStack": false
+    }
+  },
+  "DarkShiftPassive": {
+    "ID": 907,
+    "Name": "Curse Chain",
+    "Description": "Whenever this Monster applies a Debuff to an enemy, 35% chance to spread that Debuff to another enemy.",
+    "IsPassiveSkill": true,
+    "PassiveSkillProperties": {
+      "Description": "Whenever this Monster applies a Debuff to an enemy, {0%} chance to spread that Debuff to another enemy.",
+      "IsAura": false,
+      "IsUnique": false
+    },
+    "IsPassiveCurseChain": true,
+    "PassiveCurseChainProperties": {
+      "IsOnApplyDebuffToEnemy": true,
+      "Chance": 0.35
+    }
+  },
+  "BaseSkills": [
+    {
+      "ID": 615,
+      "Name": "Freeze",
+      "Description": "5 x 30% (150%) magical damage (water) Applies Chill (Debuff)",
+      "IsBaseAction": true,
+      "BaseActionProperties": {
+        "Tier": 1,
+        "Ultimate": false,
+        "Mana": 60,
+        "TargetType": 0,
+        "Duration": 2.6,
+        "IsDefaultAction": false,
+        "Tooltip": "",
+        "ParentAction": null,
+        "SpecialAttackAnimation": false,
+        "IsPotion": false
+      },
+      "IsActionModifier": true,
+      "ActionModifierProperties": {},
+      "IsActionDamage": true,
+      "ActionDamageProperties": {
+        "DamageMultiplicator": 0.3,
+        "TotalDamage": 1.5,
+        "CalculatedDamage": 0.3,
+        "CalculatedTotalDamage": 1.5,
+        "HitTimings": [
+          1.2,
+          1.5,
+          1.8,
+          2.1,
+          2.4
+        ],
+        "Element": 2,
+        "Type": 1,
+        "FlashDuration": 0.2,
+        "MultipleEnemiesDelay": 0.2,
+        "CritDamageBonus": 0.0,
+        "DefenseBypass": 0.0,
+        "DefenseBypassBurnCondition": false,
+        "PlayHitAnimation": false,
+        "TriggersBleed": false,
+        "CannotBeDodged": false,
+        "TriggersAllShocks": false,
+        "LifestealAmount": 0.0,
+        "GravityMultiplier": 0.0,
+        "BuffMultiplier": 0.0
+      },
+      "IsActionDebuff": true,
+      "ActionDebuffProperties": {
+        "Debuffs": [
+          3
+        ],
+        "ApplyDelay": 0.7,
+        "ApplyChance": 1.0,
+        "TargetCount": 1
+      }
+    },
+    {
+      "ID": 509,
+      "Name": "Voltage",
+      "Description": "4 x 40% (160%) magical damage (wind) Applies Shock (Debuff)",
+      "IsBaseAction": true,
+      "BaseActionProperties": {
+        "Tier": 1,
+        "Ultimate": false,
+        "Mana": 60,
+        "TargetType": 0,
+        "Duration": 1.9,
+        "IsDefaultAction": false,
+        "Tooltip": "",
+        "ParentAction": null,
+        "SpecialAttackAnimation": false,
+        "IsPotion": false
+      },
+      "IsActionModifier": true,
+      "ActionModifierProperties": {},
+      "IsActionDamage": true,
+      "ActionDamageProperties": {
+        "DamageMultiplicator": 0.4,
+        "TotalDamage": 1.6,
+        "CalculatedDamage": 0.4,
+        "CalculatedTotalDamage": 1.6,
+        "HitTimings": [
+          0.3,
+          0.6,
+          0.9,
+          1.2
+        ],
+        "Element": 3,
+        "Type": 1,
+        "FlashDuration": 0.4,
+        "MultipleEnemiesDelay": 0.2,
+        "CritDamageBonus": 0.0,
+        "DefenseBypass": 0.0,
+        "DefenseBypassBurnCondition": false,
+        "PlayHitAnimation": true,
+        "TriggersBleed": false,
+        "CannotBeDodged": false,
+        "TriggersAllShocks": false,
+        "LifestealAmount": 0.0,
+        "GravityMultiplier": 0.0,
+        "BuffMultiplier": 0.0
+      },
+      "IsActionDebuff": true,
+      "ActionDebuffProperties": {
+        "Debuffs": [
+          1
+        ],
+        "ApplyDelay": 1.6,
+        "ApplyChance": 1.0,
+        "TargetCount": 1
+      }
+    },
+    {
+      "ID": 194,
+      "Name": "Fire Weakness",
+      "Description": "Fire damage increased by 50%",
+      "IsPassiveSkill": true,
+      "PassiveSkillProperties": {
+        "Description": "Fire damage increased by {50%}",
+        "IsAura": false,
+        "IsUnique": false
+      },
+      "IsPassiveElementModifier": true,
+      "PassiveElementModifierProperties": {
+        "Element": 1,
+        "Modifier": 0.5
+      }
+    },
+    {
+      "ID": 232,
+      "Name": "Earth Weakness",
+      "Description": "Earth damage increased by 50%",
+      "IsPassiveSkill": true,
+      "PassiveSkillProperties": {
+        "Description": "Earth damage increased by {50%}",
+        "IsAura": false,
+        "IsUnique": false
+      },
+      "IsPassiveElementModifier": true,
+      "PassiveElementModifierProperties": {
+        "Element": 4,
+        "Modifier": 0.5
+      }
+    },
+    {
+      "ID": 275,
+      "Name": "Water Resistance",
+      "Description": "Water damage reduced by 50%",
+      "IsPassiveSkill": true,
+      "PassiveSkillProperties": {
+        "Description": "Water damage reduced by {50%}",
+        "IsAura": false,
+        "IsUnique": false
+      },
+      "IsPassiveElementModifier": true,
+      "PassiveElementModifierProperties": {
+        "Element": 2,
+        "Modifier": -0.5
+      }
+    },
+    {
+      "ID": 203,
+      "Name": "Wind Resistance",
+      "Description": "Wind damage reduced by 50%",
+      "IsPassiveSkill": true,
+      "PassiveSkillProperties": {
+        "Description": "Wind damage reduced by {50%}",
+        "IsAura": false,
+        "IsUnique": false
+      },
+      "IsPassiveElementModifier": true,
+      "PassiveElementModifierProperties": {
+        "Element": 3,
+        "Modifier": -0.5
+      }
+    }
+  ],
+  "SkillTrees": [
+    {
+      "Tier1Skills": [],
+      "Tier2Skills": [
+        {
+          "ID": 967,
+          "Name": "Sonic Wave",
+          "Description": "2 x 60% (120%) magical damage (neutral) Hits all enemies, every hit has a 15% chance to apply Weakness (Debuff).",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 2,
+            "Ultimate": false,
+            "Mana": 80,
+            "TargetType": 1,
+            "Duration": 2.8,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": null,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 0.6,
+            "TotalDamage": 1.2,
+            "CalculatedDamage": 0.59455,
+            "CalculatedTotalDamage": 1.1891,
+            "HitTimings": [
+              1.5,
+              2.2
+            ],
+            "Element": 0,
+            "Type": 1,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          },
+          "IsActionDebuffOnHit": true,
+          "ActionDebuffOnHitProperties": {
+            "Debuff": 0,
+            "dualDebuff": false,
+            "Debuff2": 0,
+            "ApplyChance": 0.15
+          }
+        }
+      ],
+      "Tier3Skills": [
+        {
+          "ID": 968,
+          "Name": "Sonic Wave Lvl 2",
+          "Description": "2 x 80% (160%) magical damage (neutral) Hits all enemies, every hit has a 15% chance to apply Weakness (Debuff).",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 3,
+            "Ultimate": false,
+            "Mana": 120,
+            "TargetType": 1,
+            "Duration": 2.8,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 967,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 0.8,
+            "TotalDamage": 1.6,
+            "CalculatedDamage": 0.8102899,
+            "CalculatedTotalDamage": 1.62057984,
+            "HitTimings": [
+              1.5,
+              2.2
+            ],
+            "Element": 0,
+            "Type": 1,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          },
+          "IsActionDebuffOnHit": true,
+          "ActionDebuffOnHitProperties": {
+            "Debuff": 0,
+            "dualDebuff": false,
+            "Debuff2": 0,
+            "ApplyChance": 0.15
+          }
+        },
+        {
+          "ID": 117,
+          "Name": "Magic Plus",
+          "Description": "Improve Magic rating by 1 (Increases Magic by 26)",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStat": true,
+          "PassiveImproveStatProperties": {
+            "IsOnCalculateBaseStats": true,
+            "IsOnCalculateStats": true,
+            "Stat": 1,
+            "Value": 1.0,
+            "IsPercent": false,
+            "IsNegative": false
+          }
+        },
+        {
+          "ID": 577,
+          "Name": "Magic Proc",
+          "Description": "Every attack triggers an additional hit equal to 35% of Magic value.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "Every attack triggers an additional hit equal to {1%} of Magic value.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveComboMaster": true,
+          "PassiveComboMasterProperties": {
+            "IsOnAllyActionDamageStarted": true,
+            "DamageValue": 0.0,
+            "StatScaling": 0.35,
+            "ScaleStat": 1,
+            "AnimElement": null,
+            "ElementRestriction": 8,
+            "TypeRestriction": 0
+          }
+        }
+      ],
+      "Tier4Skills": [
+        {
+          "ID": 969,
+          "Name": "Sonic Wave Lvl 3",
+          "Description": "2 x 110% (220%) magical damage (neutral) Hits all enemies, every hit has a 15% chance to apply Weakness (Debuff).",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 4,
+            "Ultimate": false,
+            "Mana": 170,
+            "TargetType": 1,
+            "Duration": 2.8,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 968,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 1.1,
+            "TotalDamage": 2.2,
+            "CalculatedDamage": 1.08220816,
+            "CalculatedTotalDamage": 2.16441631,
+            "HitTimings": [
+              1.5,
+              2.2
+            ],
+            "Element": 0,
+            "Type": 1,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          },
+          "IsActionDebuffOnHit": true,
+          "ActionDebuffOnHitProperties": {
+            "Debuff": 0,
+            "dualDebuff": false,
+            "Debuff2": 0,
+            "ApplyChance": 0.15
+          }
+        },
+        {
+          "ID": 970,
+          "Name": "Sonic Assault",
+          "Description": "5 x 75% (375%) magical damage (neutral) Applies Weakness (Debuff)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 4,
+            "Ultimate": false,
+            "Mana": 160,
+            "TargetType": 0,
+            "Duration": 2.3,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": null,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 0.75,
+            "TotalDamage": 3.75,
+            "CalculatedDamage": 0.749765,
+            "CalculatedTotalDamage": 3.74882483,
+            "HitTimings": [
+              1.0,
+              1.2,
+              1.4,
+              1.6,
+              1.8
+            ],
+            "Element": 0,
+            "Type": 1,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          },
+          "IsActionDebuff": true,
+          "ActionDebuffProperties": {
+            "Debuffs": [
+              0
+            ],
+            "ApplyDelay": 2.1,
+            "ApplyChance": 1.0,
+            "TargetCount": 1
+          }
+        },
+        {
+          "ID": 709,
+          "Name": "Auto Heal",
+          "Description": "When attacking, also heal the Monster with the lowest health in the party by 200% of Magic.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "When attacking, also heal the Monster with the lowest health in the party by {0%} of Magic.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveAutoHeal": true,
+          "PassiveAutoHealProperties": {
+            "IsOnActionDamageStarted": true,
+            "MagicScaling": 2.0,
+            "HealEffect": null
+          }
+        },
+        {
+          "ID": 427,
+          "Name": "Mana Stability",
+          "Description": "Increase Defense by 15% of this Monster's Max Mana.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "Increase Defense by {0%} of this Monster's Max Mana.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStatDependant": true,
+          "PassiveImproveStatDependantProperties": {
+            "IsOnCalculateStatsPostMultiplication": true,
+            "IsOnCalculateTeamMonsterStats": true,
+            "DependantStat": 4,
+            "IncreasedStat": 2,
+            "Value": 0.15,
+            "Pass": 0
+          }
+        }
+      ],
+      "Tier5Skills": [
+        {
+          "ID": 1264,
+          "Name": "Sonic Wave Lvl 4",
+          "Description": "2 x 140% (280%) magical damage (neutral) Hits all enemies, every hit has a 15% chance to apply Weakness (Debuff).",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 5,
+            "Ultimate": false,
+            "Mana": 220,
+            "TargetType": 1,
+            "Duration": 2.8,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 969,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 1.4,
+            "TotalDamage": 2.8,
+            "CalculatedDamage": 1.39341772,
+            "CalculatedTotalDamage": 2.78683543,
+            "HitTimings": [
+              1.5,
+              2.2
+            ],
+            "Element": 0,
+            "Type": 1,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          },
+          "IsActionDebuffOnHit": true,
+          "ActionDebuffOnHitProperties": {
+            "Debuff": 0,
+            "dualDebuff": false,
+            "Debuff2": 0,
+            "ApplyChance": 0.15
+          }
+        },
+        {
+          "ID": 1263,
+          "Name": "Sonic Assault Lvl 2",
+          "Description": "6 x 80% (480%) magical damage (neutral) Applies Weakness (Debuff)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 5,
+            "Ultimate": false,
+            "Mana": 210,
+            "TargetType": 0,
+            "Duration": 2.3,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 970,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 0.8,
+            "TotalDamage": 4.8,
+            "CalculatedDamage": 0.7866101,
+            "CalculatedTotalDamage": 4.71966076,
+            "HitTimings": [
+              1.0,
+              1.2,
+              1.4,
+              1.6,
+              1.8,
+              2.0
+            ],
+            "Element": 0,
+            "Type": 1,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          },
+          "IsActionDebuff": true,
+          "ActionDebuffProperties": {
+            "Debuffs": [
+              0
+            ],
+            "ApplyDelay": 2.1,
+            "ApplyChance": 1.0,
+            "TargetCount": 1
+          }
+        },
+        {
+          "ID": 1117,
+          "Name": "Magic Penetration",
+          "Description": "Aura: Mage Monsters in the party ignore 15% of the target's Defense damage reduction value.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "{Mage} Monsters in the party ignore {0%} of the target's Defense damage reduction value.",
+            "IsAura": true,
+            "IsUnique": false
+          },
+          "IsPassiveArmorBypass": true,
+          "PassiveArmorBypassProperties": {
+            "IsOnCalculateStats": true,
+            "IsOnCalculateTeamMonsterStats": true,
+            "BypassAmount": 0.15,
+            "TypeRestriction": 16
+          }
+        },
+        {
+          "ID": 106,
+          "Name": "Mana Overload",
+          "Description": "Increase Attack and Magic by 15% of this Monster's Max Mana.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "Increase Attack and Magic by {0%} of this Monster's Max Mana.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStatDependant": true,
+          "PassiveImproveStatDependantProperties": {
+            "IsOnCalculateStatsPostMultiplication": true,
+            "IsOnCalculateTeamMonsterStats": true,
+            "DependantStat": 4,
+            "IncreasedStat": 8,
+            "Value": 0.15,
+            "Pass": 0
+          }
+        }
+      ]
+    },
+    {
+      "Tier1Skills": [
+        {
+          "ID": 615,
+          "Name": "Freeze",
+          "Description": "5 x 30% (150%) magical damage (water) Applies Chill (Debuff)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 1,
+            "Ultimate": false,
+            "Mana": 60,
+            "TargetType": 0,
+            "Duration": 2.6,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": null,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 0.3,
+            "TotalDamage": 1.5,
+            "CalculatedDamage": 0.3,
+            "CalculatedTotalDamage": 1.5,
+            "HitTimings": [
+              1.2,
+              1.5,
+              1.8,
+              2.1,
+              2.4
+            ],
+            "Element": 2,
+            "Type": 1,
+            "FlashDuration": 0.2,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": false,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          },
+          "IsActionDebuff": true,
+          "ActionDebuffProperties": {
+            "Debuffs": [
+              3
+            ],
+            "ApplyDelay": 0.7,
+            "ApplyChance": 1.0,
+            "TargetCount": 1
+          }
+        }
+      ],
+      "Tier2Skills": [
+        {
+          "ID": 617,
+          "Name": "Freeze Lvl 2",
+          "Description": "5 x 40% (200%) magical damage (water) Applies Chill (Debuff)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 2,
+            "Ultimate": false,
+            "Mana": 90,
+            "TargetType": 0,
+            "Duration": 2.6,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 615,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 0.4,
+            "TotalDamage": 2.0,
+            "CalculatedDamage": 0.408,
+            "CalculatedTotalDamage": 2.04,
+            "HitTimings": [
+              1.2,
+              1.5,
+              1.8,
+              2.1,
+              2.4
+            ],
+            "Element": 2,
+            "Type": 1,
+            "FlashDuration": 0.2,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": false,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          },
+          "IsActionDebuff": true,
+          "ActionDebuffProperties": {
+            "Debuffs": [
+              3
+            ],
+            "ApplyDelay": 0.7,
+            "ApplyChance": 1.0,
+            "TargetCount": 1
+          }
+        },
+        {
+          "ID": 175,
+          "Name": "Mana Plus",
+          "Description": "Improve Mana rating by 1 (Increases Mana by 20. Increases Mana Regeneration by 11)",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStat": true,
+          "PassiveImproveStatProperties": {
+            "IsOnCalculateBaseStats": true,
+            "IsOnCalculateStats": true,
+            "Stat": 4,
+            "Value": 1.0,
+            "IsPercent": false,
+            "IsNegative": false
+          }
+        },
+        {
+          "ID": 441,
+          "Name": "Chilling Cold",
+          "Description": "Every Water attack hit has a 15% chance to apply Chill.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "OverlayDebuffs": [
+              3
+            ],
+            "Description": "Every Water attack hit has a {0%} chance to apply {Chill}.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveDebuffChance": true,
+          "PassiveDebuffChanceProperties": {
+            "IsOnActionDamageHit": true,
+            "IsOnCounterAttackHit": true,
+            "Debuff": 3,
+            "Chance": 0.15,
+            "RestrictToElement": true,
+            "ElementRestriction": 2
+          }
+        },
+        {
+          "ID": 78,
+          "Name": "Health Plus",
+          "Description": "Improve Health rating by 1 (Increases Health by 332)",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStat": true,
+          "PassiveImproveStatProperties": {
+            "IsOnCalculateBaseStats": true,
+            "IsOnCalculateStats": true,
+            "Stat": 3,
+            "Value": 1.0,
+            "IsPercent": false,
+            "IsNegative": false
+          }
+        }
+      ],
+      "Tier3Skills": [
+        {
+          "ID": 616,
+          "Name": "Freeze Lvl 3",
+          "Description": "6 x 45% (270%) magical damage (water) Applies Chill (Debuff)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 3,
+            "Ultimate": false,
+            "Mana": 130,
+            "TargetType": 0,
+            "Duration": 2.6,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 617,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 0.45,
+            "TotalDamage": 2.69999981,
+            "CalculatedDamage": 0.44025,
+            "CalculatedTotalDamage": 2.6415,
+            "HitTimings": [
+              1.15,
+              1.4,
+              1.65,
+              1.9,
+              2.15,
+              2.4
+            ],
+            "Element": 2,
+            "Type": 1,
+            "FlashDuration": 0.2,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": false,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          },
+          "IsActionDebuff": true,
+          "ActionDebuffProperties": {
+            "Debuffs": [
+              3
+            ],
+            "ApplyDelay": 0.7,
+            "ApplyChance": 1.0,
+            "TargetCount": 1
+          }
+        },
+        {
+          "ID": 620,
+          "Name": "Initial Chill",
+          "Description": "Apply Chill (Debuff) to a random enemy at the start of combat.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "OverlayDebuffs": [
+              3
+            ],
+            "Description": "Apply {Chill} (Debuff) to a random enemy at the start of combat.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveStartCombatDebuff": true,
+          "PassiveStartCombatDebuffProperties": {
+            "IsOnCombatStart": true,
+            "Debuff": 3
+          }
+        },
+        {
+          "ID": 619,
+          "Name": "Sub Zero",
+          "Description": "Unique Aura: Chill causes enemies affected by it to take 10% increased damage.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "{Chill} causes enemies affected by it to take {0%} increased damage.",
+            "IsAura": true,
+            "IsUnique": true
+          },
+          "IsPassiveSubZero": true,
+          "PassiveSubZeroProperties": {
+            "IsOnAllyActionDamageHit": true,
+            "IsOnAllyCounterAttackHit": true,
+            "DamageBonus": 0.1
+          }
+        },
+        {
+          "ID": 94,
+          "Name": "Saboteur's Shield",
+          "Description": "Apply Shield equal to 50% of own defense when applying a Debuff.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "Apply Shield equal to {0%} of own defense when applying a Debuff.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveSaboteursShield": true,
+          "PassiveSaboteursShieldProperties": {
+            "IsOnApplyDebuffToEnemy": true,
+            "Percent": 0.5
+          }
+        }
+      ],
+      "Tier4Skills": [
+        {
+          "ID": 624,
+          "Name": "Freeze Lvl 4",
+          "Description": "6 x 60% (360%) magical damage (water) Applies Chill (Debuff)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 4,
+            "Ultimate": false,
+            "Mana": 180,
+            "TargetType": 0,
+            "Duration": 2.6,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 616,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 0.6,
+            "TotalDamage": 3.60000014,
+            "CalculatedDamage": 0.5865458,
+            "CalculatedTotalDamage": 3.519275,
+            "HitTimings": [
+              1.15,
+              1.4,
+              1.65,
+              1.9,
+              2.15,
+              2.4
+            ],
+            "Element": 2,
+            "Type": 1,
+            "FlashDuration": 0.2,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": false,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          },
+          "IsActionDebuff": true,
+          "ActionDebuffProperties": {
+            "Debuffs": [
+              3
+            ],
+            "ApplyDelay": 0.7,
+            "ApplyChance": 1.0,
+            "TargetCount": 1
+          }
+        },
+        {
+          "ID": 840,
+          "Name": "Deep Freeze",
+          "Description": "4 x 85% (340%) magical damage (water) Deals an additional 40% hit for every Chill on the target",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 4,
+            "Ultimate": false,
+            "Mana": 160,
+            "TargetType": 0,
+            "Duration": 2.7,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": null,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionConditionalDamage": true,
+          "ActionConditionalDamageProperties": {
+            "requiredDebuff": 3,
+            "HitForEveryDebuffStack": true,
+            "PerHitDelay": 0.2,
+            "DamageMultiplicator": 0.4,
+            "HitTimings": [
+              2.4
+            ],
+            "DurationIncrease": 0.0,
+            "AnimElement": null,
+            "FlippedAnimElement": null,
+            "AnimElementDelay": 2.3
+          },
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 0.85,
+            "TotalDamage": 3.4,
+            "CalculatedDamage": 0.934743643,
+            "CalculatedTotalDamage": 3.73897457,
+            "HitTimings": [
+              0.7,
+              1.0,
+              1.3,
+              1.6
+            ],
+            "Element": 2,
+            "Type": 1,
+            "FlashDuration": 0.2,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": false,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          }
+        },
+        {
+          "ID": 1389,
+          "Name": "Frostbite",
+          "Description": "Unique Aura: When a Monster in the party applies Chill on an enemy, 40% chance to also apply Armor Break.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "OverlayDebuffs": [
+              3,
+              5
+            ],
+            "Description": "When a Monster in the party applies {Chill} on an enemy, {0%} chance to also apply {Armor Break}.",
+            "IsAura": true,
+            "IsUnique": true
+          },
+          "IsPassiveSpreadDebuff": true,
+          "PassiveSpreadDebuffProperties": {
+            "IsOnAllyApplyDebuffToEnemy": true,
+            "Debuff": 3,
+            "SpreadDebuff": 5,
+            "Chance": 0.4,
+            "OnSameEnemy": true
+          }
+        },
+        {
+          "ID": 117,
+          "Name": "Magic Plus",
+          "Description": "Improve Magic rating by 1 (Increases Magic by 26)",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStat": true,
+          "PassiveImproveStatProperties": {
+            "IsOnCalculateBaseStats": true,
+            "IsOnCalculateStats": true,
+            "Stat": 1,
+            "Value": 1.0,
+            "IsPercent": false,
+            "IsNegative": false
+          }
+        }
+      ],
+      "Tier5Skills": [
+        {
+          "ID": 1279,
+          "Name": "Freeze Lvl 5",
+          "Description": "7 x 60% (420%) magical damage (water) Applies Chill (Debuff)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 5,
+            "Ultimate": false,
+            "Mana": 220,
+            "TargetType": 0,
+            "Duration": 2.9,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 624,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 0.6,
+            "TotalDamage": 4.20000029,
+            "CalculatedDamage": 0.6130351,
+            "CalculatedTotalDamage": 4.29124546,
+            "HitTimings": [
+              1.15,
+              1.4,
+              1.65,
+              1.9,
+              2.15,
+              2.4,
+              2.65
+            ],
+            "Element": 2,
+            "Type": 1,
+            "FlashDuration": 0.2,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": false,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          },
+          "IsActionDebuff": true,
+          "ActionDebuffProperties": {
+            "Debuffs": [
+              3
+            ],
+            "ApplyDelay": 0.7,
+            "ApplyChance": 1.0,
+            "TargetCount": 1
+          }
+        },
+        {
+          "ID": 1278,
+          "Name": "Deep Freeze Lvl 2",
+          "Description": "4 x 110% (440%) magical damage (water) Deals an additional 40% hit for every Chill on the target",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 5,
+            "Ultimate": false,
+            "Mana": 210,
+            "TargetType": 0,
+            "Duration": 2.7,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 840,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionConditionalDamage": true,
+          "ActionConditionalDamageProperties": {
+            "requiredDebuff": 3,
+            "HitForEveryDebuffStack": true,
+            "PerHitDelay": 0.2,
+            "DamageMultiplicator": 0.4,
+            "HitTimings": [
+              2.4
+            ],
+            "DurationIncrease": 0.0,
+            "AnimElement": null,
+            "FlippedAnimElement": null,
+            "AnimElementDelay": 2.3
+          },
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 1.1,
+            "TotalDamage": 4.4,
+            "CalculatedDamage": 1.19421387,
+            "CalculatedTotalDamage": 4.77685547,
+            "HitTimings": [
+              0.7,
+              1.0,
+              1.3,
+              1.6
+            ],
+            "Element": 2,
+            "Type": 1,
+            "FlashDuration": 0.2,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": false,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          }
+        },
+        {
+          "ID": 534,
+          "Name": "Multi Chill",
+          "Description": "Aura: Chill (Debuff) can be stacked two additional times on enemies. Additional stacks are only half as strong.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "{Chill} (Debuff) can be stacked two additional times on enemies. Additional stacks are only half as strong.",
+            "IsAura": true,
+            "IsUnique": false
+          },
+          "IsPassiveIncreaseDebuffStacks": true,
+          "PassiveIncreaseDebuffStacksProperties": {
+            "stackCountIncrease": 2,
+            "Debuff": 3
+          }
+        },
+        {
+          "ID": 828,
+          "Name": "Mana Focus",
+          "Description": "Mana and Mana Regeneration values from equipment increased by 25%.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "Mana and Mana Regeneration values from equipment increased by {0%}.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveEquipmentFocus": true,
+          "PassiveEquipmentFocusProperties": {
+            "Stat": 4,
+            "Bonus": 0.25
+          }
+        }
+      ]
+    },
+    {
+      "Tier1Skills": [
+        {
+          "ID": 509,
+          "Name": "Voltage",
+          "Description": "4 x 40% (160%) magical damage (wind) Applies Shock (Debuff)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 1,
+            "Ultimate": false,
+            "Mana": 60,
+            "TargetType": 0,
+            "Duration": 1.9,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": null,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 0.4,
+            "TotalDamage": 1.6,
+            "CalculatedDamage": 0.4,
+            "CalculatedTotalDamage": 1.6,
+            "HitTimings": [
+              0.3,
+              0.6,
+              0.9,
+              1.2
+            ],
+            "Element": 3,
+            "Type": 1,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          },
+          "IsActionDebuff": true,
+          "ActionDebuffProperties": {
+            "Debuffs": [
+              1
+            ],
+            "ApplyDelay": 1.6,
+            "ApplyChance": 1.0,
+            "TargetCount": 1
+          }
+        }
+      ],
+      "Tier2Skills": [
+        {
+          "ID": 510,
+          "Name": "Voltage Lvl 2",
+          "Description": "5 x 40% (200%) magical damage (wind) Applies Shock (Debuff)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 2,
+            "Ultimate": false,
+            "Mana": 90,
+            "TargetType": 0,
+            "Duration": 2.0,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 509,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 0.4,
+            "TotalDamage": 2.0,
+            "CalculatedDamage": 0.408,
+            "CalculatedTotalDamage": 2.04,
+            "HitTimings": [
+              0.3,
+              0.55,
+              0.8,
+              1.05,
+              1.3
+            ],
+            "Element": 3,
+            "Type": 1,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          },
+          "IsActionDebuff": true,
+          "ActionDebuffProperties": {
+            "Debuffs": [
+              1
+            ],
+            "ApplyDelay": 1.7,
+            "ApplyChance": 1.0,
+            "TargetCount": 1
+          }
+        },
+        {
+          "ID": 242,
+          "Name": "Defense Plus",
+          "Description": "Improve Defense rating by 1 (Increases Defense by 37)",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStat": true,
+          "PassiveImproveStatProperties": {
+            "IsOnCalculateBaseStats": true,
+            "IsOnCalculateStats": true,
+            "Stat": 2,
+            "Value": 1.0,
+            "IsPercent": false,
+            "IsNegative": false
+          }
+        },
+        {
+          "ID": 442,
+          "Name": "Shocking Current",
+          "Description": "Every Wind attack hit has a 15% chance to apply Shock.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "OverlayDebuffs": [
+              1
+            ],
+            "Description": "Every Wind attack hit has a {0%} chance to apply {Shock}.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveDebuffChance": true,
+          "PassiveDebuffChanceProperties": {
+            "IsOnActionDamageHit": true,
+            "IsOnCounterAttackHit": true,
+            "Debuff": 1,
+            "Chance": 0.15,
+            "RestrictToElement": true,
+            "ElementRestriction": 3
+          }
+        },
+        {
+          "ID": 175,
+          "Name": "Mana Plus",
+          "Description": "Improve Mana rating by 1 (Increases Mana by 20. Increases Mana Regeneration by 11)",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStat": true,
+          "PassiveImproveStatProperties": {
+            "IsOnCalculateBaseStats": true,
+            "IsOnCalculateStats": true,
+            "Stat": 4,
+            "Value": 1.0,
+            "IsPercent": false,
+            "IsNegative": false
+          }
+        }
+      ],
+      "Tier3Skills": [
+        {
+          "ID": 511,
+          "Name": "Voltage Lvl 3",
+          "Description": "5 x 55% (275%) magical damage (wind) Applies Shock (Debuff)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 3,
+            "Ultimate": false,
+            "Mana": 130,
+            "TargetType": 0,
+            "Duration": 2.0,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 510,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 0.55,
+            "TotalDamage": 2.75,
+            "CalculatedDamage": 0.548299968,
+            "CalculatedTotalDamage": 2.7415,
+            "HitTimings": [
+              0.3,
+              0.55,
+              0.8,
+              1.05,
+              1.3
+            ],
+            "Element": 3,
+            "Type": 1,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          },
+          "IsActionDebuff": true,
+          "ActionDebuffProperties": {
+            "Debuffs": [
+              1
+            ],
+            "ApplyDelay": 1.7,
+            "ApplyChance": 1.0,
+            "TargetCount": 1
+          }
+        },
+        {
+          "ID": 354,
+          "Name": "Initial Shock",
+          "Description": "Apply Shock (Debuff) on a random enemy at the start of combat.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "OverlayDebuffs": [
+              1
+            ],
+            "Description": "Apply {Shock} (Debuff) on a random enemy at the start of combat.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveStartCombatDebuff": true,
+          "PassiveStartCombatDebuffProperties": {
+            "IsOnCombatStart": true,
+            "Debuff": 1
+          }
+        },
+        {
+          "ID": 356,
+          "Name": "Energize",
+          "Description": "Unique Aura: Monsters in the party recover 7.5% of Max Health when they trigger Shock damage.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "Monsters in the party recover {0%} of Max Health when they trigger {Shock} damage.",
+            "IsAura": true,
+            "IsUnique": true
+          },
+          "IsPassiveEnergize": true,
+          "PassiveEnergizeProperties": {
+            "IsOnTriggerShockDamage": true,
+            "HealAmount": 0.075
+          }
+        },
+        {
+          "ID": 158,
+          "Name": "Dominance",
+          "Description": "Aura: Enemies receive 3% increased damage for each Debuff on them.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "Enemies receive {0%} increased damage for each Debuff on them.",
+            "IsAura": true,
+            "IsUnique": false
+          },
+          "IsPassiveDominance": true,
+          "PassiveDominanceProperties": {
+            "IsOnAllyActionDamageHit": true,
+            "IsOnAllyCounterAttackHit": true,
+            "DamageBonus": 0.03
+          }
+        }
+      ],
+      "Tier4Skills": [
+        {
+          "ID": 730,
+          "Name": "Voltage Lvl 4",
+          "Description": "6 x 55% (330%) magical damage (wind) Applies Shock (Debuff)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 4,
+            "Ultimate": false,
+            "Mana": 160,
+            "TargetType": 0,
+            "Duration": 2.2,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 511,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 0.55,
+            "TotalDamage": 3.30000019,
+            "CalculatedDamage": 0.553212464,
+            "CalculatedTotalDamage": 3.319275,
+            "HitTimings": [
+              0.3,
+              0.55,
+              0.8,
+              1.05,
+              1.3,
+              1.55
+            ],
+            "Element": 3,
+            "Type": 1,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          },
+          "IsActionDebuff": true,
+          "ActionDebuffProperties": {
+            "Debuffs": [
+              1
+            ],
+            "ApplyDelay": 1.9,
+            "ApplyChance": 1.0,
+            "TargetCount": 1
+          }
+        },
+        {
+          "ID": 839,
+          "Name": "Thunder Strike",
+          "Description": "1 x 370% magical damage (wind) Deals additional 3 x 20% (60%)  damage if the target has Shock (Debuff)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 4,
+            "Ultimate": false,
+            "Mana": 160,
+            "TargetType": 0,
+            "Duration": 1.2,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": null,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionConditionalDamage": true,
+          "ActionConditionalDamageProperties": {
+            "requiredDebuff": 1,
+            "HitForEveryDebuffStack": false,
+            "PerHitDelay": 0.2,
+            "DamageMultiplicator": 0.2,
+            "HitTimings": [
+              1.5,
+              1.75,
+              2.0
+            ],
+            "DurationIncrease": 1.0,
+            "AnimElement": null,
+            "FlippedAnimElement": null,
+            "AnimElementDelay": 1.1
+          },
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 3.7,
+            "TotalDamage": 3.7,
+            "CalculatedDamage": 4.038975,
+            "CalculatedTotalDamage": 4.038975,
+            "HitTimings": [
+              0.7
+            ],
+            "Element": 3,
+            "Type": 1,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          }
+        },
+        {
+          "ID": 448,
+          "Name": "Toxic Reaction",
+          "Description": "Unique Aura: When an enemy receives Shock damage, there is a 40% chance to apply Poison.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "OverlayDebuffs": [
+              2
+            ],
+            "Description": "When an enemy receives {Shock} damage, there is a {0%} chance to apply {Poison}.",
+            "IsAura": true,
+            "IsUnique": true
+          },
+          "IsPassiveDebuffTriggersDebuff": true,
+          "PassiveDebuffTriggersDebuffProperties": {
+            "IsOnTriggerBurnDamage": true,
+            "IsOnTriggerShockDamage": true,
+            "IsOnTriggerPoisonDamage": true,
+            "DebuffTrigger": 1,
+            "Chance": 0.4,
+            "AppliedDebuff": 2
+          }
+        },
+        {
+          "ID": 253,
+          "Name": "Proliferate",
+          "Description": "When applying a Debuff, trigger an additional 30% damage hit.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "When applying a Debuff, trigger an additional {0%} damage hit. ",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveProliferate": true,
+          "PassiveProliferateProperties": {
+            "IsOnApplyDebuffToEnemy": true,
+            "Damage": 0.3,
+            "AnimElement": null
+          }
+        }
+      ],
+      "Tier5Skills": [
+        {
+          "ID": 1304,
+          "Name": "Voltage Lvl 5",
+          "Description": "6 x 70% (420%) magical damage (wind) Applies Shock (Debuff)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 5,
+            "Ultimate": false,
+            "Mana": 200,
+            "TargetType": 0,
+            "Duration": 2.2,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 730,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 0.7,
+            "TotalDamage": 4.2,
+            "CalculatedDamage": 0.6985409,
+            "CalculatedTotalDamage": 4.19124556,
+            "HitTimings": [
+              0.3,
+              0.55,
+              0.8,
+              1.05,
+              1.3,
+              1.55
+            ],
+            "Element": 3,
+            "Type": 1,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          },
+          "IsActionDebuff": true,
+          "ActionDebuffProperties": {
+            "Debuffs": [
+              1
+            ],
+            "ApplyDelay": 1.9,
+            "ApplyChance": 1.0,
+            "TargetCount": 1
+          }
+        },
+        {
+          "ID": 1303,
+          "Name": "Thunder Strike Lvl 2",
+          "Description": "1 x 460% magical damage (wind) Deals additional 4 x 20% (80%)  damage if the target has Shock (Debuff)",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 5,
+            "Ultimate": false,
+            "Mana": 210,
+            "TargetType": 0,
+            "Duration": 1.2,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 839,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionConditionalDamage": true,
+          "ActionConditionalDamageProperties": {
+            "requiredDebuff": 1,
+            "HitForEveryDebuffStack": false,
+            "PerHitDelay": 0.2,
+            "DamageMultiplicator": 0.2,
+            "HitTimings": [
+              1.5,
+              1.75,
+              2.0,
+              2.25
+            ],
+            "DurationIncrease": 1.3,
+            "AnimElement": null,
+            "FlippedAnimElement": null,
+            "AnimElementDelay": 1.1
+          },
+          "IsActionDamage": true,
+          "ActionDamageProperties": {
+            "DamageMultiplicator": 4.6,
+            "TotalDamage": 4.6,
+            "CalculatedDamage": 4.901096,
+            "CalculatedTotalDamage": 4.901096,
+            "HitTimings": [
+              0.7
+            ],
+            "Element": 3,
+            "Type": 1,
+            "FlashDuration": 0.4,
+            "MultipleEnemiesDelay": 0.2,
+            "CritDamageBonus": 0.0,
+            "DefenseBypass": 0.0,
+            "DefenseBypassBurnCondition": false,
+            "PlayHitAnimation": true,
+            "TriggersBleed": false,
+            "CannotBeDodged": false,
+            "TriggersAllShocks": false,
+            "LifestealAmount": 0.0,
+            "GravityMultiplier": 0.0,
+            "BuffMultiplier": 0.0
+          }
+        },
+        {
+          "ID": 533,
+          "Name": "Multi Shock",
+          "Description": "Aura: Shock (Debuff) can be stacked two additional times on enemies. Additional stacks have only a 50% chance to trigger.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "{Shock} (Debuff) can be stacked two additional times on enemies. Additional stacks have only a {50%} chance to trigger.",
+            "IsAura": true,
+            "IsUnique": false
+          },
+          "IsPassiveIncreaseDebuffStacks": true,
+          "PassiveIncreaseDebuffStacksProperties": {
+            "stackCountIncrease": 2,
+            "Debuff": 1
+          }
+        },
+        {
+          "ID": 242,
+          "Name": "Defense Plus",
+          "Description": "Improve Defense rating by 1 (Increases Defense by 37)",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStat": true,
+          "PassiveImproveStatProperties": {
+            "IsOnCalculateBaseStats": true,
+            "IsOnCalculateStats": true,
+            "Stat": 2,
+            "Value": 1.0,
+            "IsPercent": false,
+            "IsNegative": false
+          }
+        }
+      ]
+    },
+    {
+      "Tier1Skills": [
+        {
+          "ID": 181,
+          "Name": "Restore",
+          "Description": "Heal target for 4 x (50 + 20% Magic) Removes 1 Debuff",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 1,
+            "Ultimate": false,
+            "Mana": 50,
+            "TargetType": 3,
+            "Duration": 1.8,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": null,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionHeal": true,
+          "ActionHealProperties": {
+            "HealAmount": 50.0,
+            "ScaleMagic": 0.2,
+            "ScaleHealth": 0.0,
+            "ScaleAttack": 0.0,
+            "ScaleMana": 0.0,
+            "ScaleDamage": 0.0,
+            "HealCaster": false,
+            "HealTimings": [
+              0.5,
+              0.8,
+              1.1,
+              1.4
+            ],
+            "ConditionType": 0,
+            "EnemyHasDebuff": 0,
+            "HealAnimElement": null,
+            "AnimElementDelay": 0.0,
+            "ActionDurationIncrease": 0.0
+          },
+          "IsActionRemoveDebuff": true,
+          "ActionRemoveDebuffProperties": {
+            "Count": 1,
+            "Delay": 1.6
+          }
+        }
+      ],
+      "Tier2Skills": [
+        {
+          "ID": 154,
+          "Name": "Restore Lvl 2",
+          "Description": "Heal target for 5 x (60 + 25% Magic) Removes 2 Debuffs",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 1,
+            "Ultimate": false,
+            "Mana": 80,
+            "TargetType": 3,
+            "Duration": 2.3,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 181,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionHeal": true,
+          "ActionHealProperties": {
+            "HealAmount": 60.0,
+            "ScaleMagic": 0.25,
+            "ScaleHealth": 0.0,
+            "ScaleAttack": 0.0,
+            "ScaleMana": 0.0,
+            "ScaleDamage": 0.0,
+            "HealCaster": false,
+            "HealTimings": [
+              0.5,
+              0.8,
+              1.1,
+              1.4,
+              1.7
+            ],
+            "ConditionType": 0,
+            "EnemyHasDebuff": 0,
+            "HealAnimElement": null,
+            "AnimElementDelay": 0.0,
+            "ActionDurationIncrease": 0.0
+          },
+          "IsActionRemoveDebuff": true,
+          "ActionRemoveDebuffProperties": {
+            "Count": 2,
+            "Delay": 1.9
+          }
+        },
+        {
+          "ID": 242,
+          "Name": "Defense Plus",
+          "Description": "Improve Defense rating by 1 (Increases Defense by 37)",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStat": true,
+          "PassiveImproveStatProperties": {
+            "IsOnCalculateBaseStats": true,
+            "IsOnCalculateStats": true,
+            "Stat": 2,
+            "Value": 1.0,
+            "IsPercent": false,
+            "IsNegative": false
+          }
+        },
+        {
+          "ID": 1388,
+          "Name": "Auto Restore",
+          "Description": "When attacking, also remove 2 Debuffs from the Monster with the most Debuffs in the party.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "When attacking, also remove {0} Debuffs from the Monster with the most Debuffs in the party.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveAutoRestore": true,
+          "PassiveAutoRestoreProperties": {
+            "IsOnActionDamageStarted": true,
+            "Count": 2
+          }
+        }
+      ],
+      "Tier3Skills": [
+        {
+          "ID": 163,
+          "Name": "Restore Lvl 3",
+          "Description": "Heal target for 5 x (70 + 25% Magic) Removes 3 Debuffs",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 1,
+            "Ultimate": false,
+            "Mana": 110,
+            "TargetType": 3,
+            "Duration": 2.5,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 154,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionHeal": true,
+          "ActionHealProperties": {
+            "HealAmount": 70.0,
+            "ScaleMagic": 0.25,
+            "ScaleHealth": 0.0,
+            "ScaleAttack": 0.0,
+            "ScaleMana": 0.0,
+            "ScaleDamage": 0.0,
+            "HealCaster": false,
+            "HealTimings": [
+              0.5,
+              0.8,
+              1.1,
+              1.4,
+              1.7
+            ],
+            "ConditionType": 0,
+            "EnemyHasDebuff": 0,
+            "HealAnimElement": null,
+            "AnimElementDelay": 0.0,
+            "ActionDurationIncrease": 0.0
+          },
+          "IsActionRemoveDebuff": true,
+          "ActionRemoveDebuffProperties": {
+            "Count": 3,
+            "Delay": 1.9
+          }
+        },
+        {
+          "ID": 246,
+          "Name": "Mass Restore",
+          "Description": "Heal all for (200 + 70% Magic) Removes 1 Debuff from all allies",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 1,
+            "Ultimate": false,
+            "Mana": 110,
+            "TargetType": 4,
+            "Duration": 1.7,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": null,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionHeal": true,
+          "ActionHealProperties": {
+            "HealAmount": 200.0,
+            "ScaleMagic": 0.7,
+            "ScaleHealth": 0.0,
+            "ScaleAttack": 0.0,
+            "ScaleMana": 0.0,
+            "ScaleDamage": 0.0,
+            "HealCaster": false,
+            "HealTimings": [
+              0.7
+            ],
+            "ConditionType": 0,
+            "EnemyHasDebuff": 0,
+            "HealAnimElement": null,
+            "AnimElementDelay": 0.0,
+            "ActionDurationIncrease": 0.0
+          },
+          "IsActionRemoveDebuff": true,
+          "ActionRemoveDebuffProperties": {
+            "Count": 1,
+            "Delay": 1.2
+          }
+        },
+        {
+          "ID": 446,
+          "Name": "Disease Control",
+          "Description": "Receive 4% reduced damage from a debuffed enemy for each Debuff on them.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "Receive {0%} reduced damage from a debuffed enemy for each Debuff on them.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveDiseaseControl": true,
+          "PassiveDiseaseControlProperties": {
+            "IsOnBeingHit": true,
+            "DamageReduction": 0.04
+          }
+        },
+        {
+          "ID": 78,
+          "Name": "Health Plus",
+          "Description": "Improve Health rating by 1 (Increases Health by 332)",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStat": true,
+          "PassiveImproveStatProperties": {
+            "IsOnCalculateBaseStats": true,
+            "IsOnCalculateStats": true,
+            "Stat": 3,
+            "Value": 1.0,
+            "IsPercent": false,
+            "IsNegative": false
+          }
+        }
+      ],
+      "Tier4Skills": [
+        {
+          "ID": 633,
+          "Name": "Restore Lvl 4",
+          "Description": "Heal target for 6 x (100 + 25% Magic) Removes 3 Debuffs",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 1,
+            "Ultimate": false,
+            "Mana": 150,
+            "TargetType": 3,
+            "Duration": 2.5,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 163,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionHeal": true,
+          "ActionHealProperties": {
+            "HealAmount": 100.0,
+            "ScaleMagic": 0.25,
+            "ScaleHealth": 0.0,
+            "ScaleAttack": 0.0,
+            "ScaleMana": 0.0,
+            "ScaleDamage": 0.0,
+            "HealCaster": false,
+            "HealTimings": [
+              0.5,
+              0.75,
+              1.0,
+              1.25,
+              1.5,
+              1.75
+            ],
+            "ConditionType": 0,
+            "EnemyHasDebuff": 0,
+            "HealAnimElement": null,
+            "AnimElementDelay": 0.0,
+            "ActionDurationIncrease": 0.0
+          },
+          "IsActionRemoveDebuff": true,
+          "ActionRemoveDebuffProperties": {
+            "Count": 3,
+            "Delay": 1.9
+          }
+        },
+        {
+          "ID": 734,
+          "Name": "Mass Restore Lvl 2",
+          "Description": "Heal all for 2 x (175 + 40% Magic) Removes 1 Debuff from all allies",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 1,
+            "Ultimate": false,
+            "Mana": 150,
+            "TargetType": 4,
+            "Duration": 2.2,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 246,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionHeal": true,
+          "ActionHealProperties": {
+            "HealAmount": 175.0,
+            "ScaleMagic": 0.4,
+            "ScaleHealth": 0.0,
+            "ScaleAttack": 0.0,
+            "ScaleMana": 0.0,
+            "ScaleDamage": 0.0,
+            "HealCaster": false,
+            "HealTimings": [
+              0.7,
+              1.2
+            ],
+            "ConditionType": 0,
+            "EnemyHasDebuff": 0,
+            "HealAnimElement": null,
+            "AnimElementDelay": 0.0,
+            "ActionDurationIncrease": 0.0
+          },
+          "IsActionRemoveDebuff": true,
+          "ActionRemoveDebuffProperties": {
+            "Count": 1,
+            "Delay": 1.7
+          }
+        },
+        {
+          "ID": 447,
+          "Name": "Overcast",
+          "Description": "Increases the Mana Cost of all attacks, healing and shielding actions by 10% and the power by 15%.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "Increases the Mana Cost of all attacks, healing and shielding actions by {1%} and the power by {0%}.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveOvercast": true,
+          "PassiveOvercastProperties": {
+            "IsOnCalculateStats": true,
+            "DamageIncrease": 0.15,
+            "ManaIncrease": 0.1
+          }
+        },
+        {
+          "ID": 1109,
+          "Name": "Hexing Support",
+          "Description": "Whenever this Monster spends a turn without attacking an enemy, apply a random Debuff on a random enemy.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "Whenever this Monster spends a turn without attacking an enemy, apply a random Debuff on a random enemy.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveHexingSupport": true,
+          "PassiveHexingSupportProperties": {
+            "IsOnActionFinished": true
+          }
+        },
+        {
+          "ID": 78,
+          "Name": "Health Plus",
+          "Description": "Improve Health rating by 1 (Increases Health by 332)",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStat": true,
+          "PassiveImproveStatProperties": {
+            "IsOnCalculateBaseStats": true,
+            "IsOnCalculateStats": true,
+            "Stat": 3,
+            "Value": 1.0,
+            "IsPercent": false,
+            "IsNegative": false
+          }
+        }
+      ],
+      "Tier5Skills": [
+        {
+          "ID": 1246,
+          "Name": "Restore Lvl 5",
+          "Description": "Heal target for 7 x (120 + 25% Magic) Removes 4 Debuffs",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 1,
+            "Ultimate": false,
+            "Mana": 210,
+            "TargetType": 3,
+            "Duration": 2.8,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 633,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionHeal": true,
+          "ActionHealProperties": {
+            "HealAmount": 120.0,
+            "ScaleMagic": 0.25,
+            "ScaleHealth": 0.0,
+            "ScaleAttack": 0.0,
+            "ScaleMana": 0.0,
+            "ScaleDamage": 0.0,
+            "HealCaster": false,
+            "HealTimings": [
+              0.5,
+              0.7,
+              0.9,
+              1.1,
+              1.3,
+              1.5,
+              1.7
+            ],
+            "ConditionType": 0,
+            "EnemyHasDebuff": 0,
+            "HealAnimElement": null,
+            "AnimElementDelay": 0.0,
+            "ActionDurationIncrease": 0.0
+          },
+          "IsActionRemoveDebuff": true,
+          "ActionRemoveDebuffProperties": {
+            "Count": 4,
+            "Delay": 1.9
+          }
+        },
+        {
+          "ID": 1245,
+          "Name": "Mass Restore Lvl 3",
+          "Description": "Heal all for 2 x (250 + 50% Magic) Removes 2 Debuffs from all allies",
+          "IsBaseAction": true,
+          "BaseActionProperties": {
+            "Tier": 1,
+            "Ultimate": false,
+            "Mana": 220,
+            "TargetType": 4,
+            "Duration": 2.5,
+            "IsDefaultAction": false,
+            "Tooltip": "",
+            "ParentAction": 734,
+            "SpecialAttackAnimation": false,
+            "IsPotion": false
+          },
+          "IsActionModifier": true,
+          "ActionModifierProperties": {},
+          "IsActionHeal": true,
+          "ActionHealProperties": {
+            "HealAmount": 250.0,
+            "ScaleMagic": 0.5,
+            "ScaleHealth": 0.0,
+            "ScaleAttack": 0.0,
+            "ScaleMana": 0.0,
+            "ScaleDamage": 0.0,
+            "HealCaster": false,
+            "HealTimings": [
+              0.7,
+              1.2
+            ],
+            "ConditionType": 0,
+            "EnemyHasDebuff": 0,
+            "HealAnimElement": null,
+            "AnimElementDelay": 0.0,
+            "ActionDurationIncrease": 0.0
+          },
+          "IsActionRemoveDebuff": true,
+          "ActionRemoveDebuffProperties": {
+            "Count": 2,
+            "Delay": 1.7
+          }
+        },
+        {
+          "ID": 383,
+          "Name": "Healing Shield",
+          "Description": "Healing skills (active and passive) also apply a Shield equal to 20% of the amount healed.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "Healing skills (active and passive) also apply a Shield equal to {0%} of the amount healed.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveHealingShield": true,
+          "PassiveHealingShieldProperties": {
+            "IsOnHealTarget": true,
+            "ConversionAmount": 0.2
+          }
+        },
+        {
+          "ID": 117,
+          "Name": "Magic Plus",
+          "Description": "Improve Magic rating by 1 (Increases Magic by 26)",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveImproveStat": true,
+          "PassiveImproveStatProperties": {
+            "IsOnCalculateBaseStats": true,
+            "IsOnCalculateStats": true,
+            "Stat": 1,
+            "Value": 1.0,
+            "IsPercent": false,
+            "IsNegative": false
+          }
+        },
+        {
+          "ID": 1869,
+          "Name": "Mana Healing",
+          "Description": "Healing actions trigger an additional Heal on the Monster with the lowest Health equal to 50% of Max Mana value.",
+          "IsPassiveSkill": true,
+          "PassiveSkillProperties": {
+            "Description": "Healing actions trigger an additional Heal on the Monster with the lowest Health equal to {3%} of Max Mana value.",
+            "IsAura": false,
+            "IsUnique": false
+          },
+          "IsPassiveComboHealing": true,
+          "PassiveComboHealingProperties": {
+            "IsOnActionHealStarted": true,
+            "HealMagicScale": 0.0,
+            "HealAttackScale": 0.0,
+            "HealDefenseScale": 0.0,
+            "HealManaeScale": 0.5
+          }
+        }
+      ]
+    }
+  ],
+  "Ultimates": [
+    {
+      "ID": 1713,
+      "Name": "Blizzard",
+      "Description": "3 x 100% (300%) magical damage (water) Hits all enemies, every hit has a 20% chance to apply Chill (Debuff).",
+      "IsBaseAction": true,
+      "BaseActionProperties": {
+        "Tier": 6,
+        "Ultimate": true,
+        "Mana": 240,
+        "TargetType": 1,
+        "Duration": 4.0,
+        "IsDefaultAction": false,
+        "Tooltip": "",
+        "ParentAction": null,
+        "SpecialAttackAnimation": false,
+        "IsPotion": false
+      },
+      "IsActionModifier": true,
+      "ActionModifierProperties": {},
+      "IsActionDamage": true,
+      "ActionDamageProperties": {
+        "DamageMultiplicator": 1.0,
+        "TotalDamage": 3.0,
+        "CalculatedDamage": 0.9616794,
+        "CalculatedTotalDamage": 2.88503814,
+        "HitTimings": [
+          1.3,
+          2.3,
+          3.3
+        ],
+        "Element": 2,
+        "Type": 1,
+        "FlashDuration": 0.4,
+        "MultipleEnemiesDelay": 0.2,
+        "CritDamageBonus": 0.0,
+        "DefenseBypass": 0.0,
+        "DefenseBypassBurnCondition": false,
+        "PlayHitAnimation": false,
+        "TriggersBleed": false,
+        "CannotBeDodged": false,
+        "TriggersAllShocks": false,
+        "LifestealAmount": 0.0,
+        "GravityMultiplier": 0.0,
+        "BuffMultiplier": 0.0
+      },
+      "IsActionDebuffOnHit": true,
+      "ActionDebuffOnHitProperties": {
+        "Debuff": 3,
+        "dualDebuff": false,
+        "Debuff2": 0,
+        "ApplyChance": 0.2
+      }
+    },
+    {
+      "ID": 1823,
+      "Name": "Ball Lightning",
+      "Description": "8 x 70% (560%) magical damage (wind) - Triggers Shock (Debuff) Damage on all enemies every hit has a 15% chance to apply Shock (Debuff).",
+      "IsBaseAction": true,
+      "BaseActionProperties": {
+        "Tier": 6,
+        "Ultimate": true,
+        "Mana": 230,
+        "TargetType": 0,
+        "Duration": 3.1,
+        "IsDefaultAction": false,
+        "Tooltip": "",
+        "ParentAction": null,
+        "SpecialAttackAnimation": false,
+        "IsPotion": false
+      },
+      "IsActionModifier": true,
+      "ActionModifierProperties": {},
+      "IsActionDamage": true,
+      "ActionDamageProperties": {
+        "DamageMultiplicator": 0.7,
+        "TotalDamage": 5.6,
+        "CalculatedDamage": 0.6223717,
+        "CalculatedTotalDamage": 4.97897339,
+        "HitTimings": [
+          1.0,
+          1.25,
+          1.5,
+          1.75,
+          2.0,
+          2.25,
+          2.5,
+          2.75
+        ],
+        "Element": 3,
+        "Type": 1,
+        "FlashDuration": 0.4,
+        "MultipleEnemiesDelay": 0.2,
+        "CritDamageBonus": 0.0,
+        "DefenseBypass": 0.0,
+        "DefenseBypassBurnCondition": false,
+        "PlayHitAnimation": true,
+        "TriggersBleed": false,
+        "CannotBeDodged": false,
+        "TriggersAllShocks": true,
+        "LifestealAmount": 0.0,
+        "GravityMultiplier": 0.0,
+        "BuffMultiplier": 0.0
+      },
+      "IsActionDebuffOnHit": true,
+      "ActionDebuffOnHitProperties": {
+        "Debuff": 1,
+        "dualDebuff": false,
+        "Debuff2": 0,
+        "ApplyChance": 0.15
+      }
+    },
+    {
+      "ID": 1718,
+      "Name": "Mega Restore",
+      "Description": "Heal all for 3 x (250 + 40% Magic) Removes 3 Debuffs from all allies",
+      "IsBaseAction": true,
+      "BaseActionProperties": {
+        "Tier": 1,
+        "Ultimate": true,
+        "Mana": 230,
+        "TargetType": 4,
+        "Duration": 3.6,
+        "IsDefaultAction": false,
+        "Tooltip": "",
+        "ParentAction": null,
+        "SpecialAttackAnimation": false,
+        "IsPotion": false
+      },
+      "IsActionModifier": true,
+      "ActionModifierProperties": {},
+      "IsActionHeal": true,
+      "ActionHealProperties": {
+        "HealAmount": 250.0,
+        "ScaleMagic": 0.4,
+        "ScaleHealth": 0.0,
+        "ScaleAttack": 0.0,
+        "ScaleMana": 0.0,
+        "ScaleDamage": 0.0,
+        "HealCaster": false,
+        "HealTimings": [
+          0.7,
+          1.4,
+          2.1
+        ],
+        "ConditionType": 0,
+        "EnemyHasDebuff": 0,
+        "HealAnimElement": null,
+        "AnimElementDelay": 0.0,
+        "ActionDurationIncrease": 0.0
+      },
+      "IsActionRemoveDebuff": true,
+      "ActionRemoveDebuffProperties": {
+        "Count": 3,
+        "Delay": 2.6
+      }
+    }
+  ],
+  "GoldReward": 49,
+  "RewardsCommon": [
+    {
+      "ID": 278,
+      "Name": "Bronze",
+      "Description": "Level 2 rare upgrade material",
+      "Icon": "",
+      "Price": 400,
+      "IsCraftMaterial": true,
+      "CraftMaterialProperties": {
+        "Description": "Level 2 rare upgrade material",
+        "Level": 2
+      }
+    },
+    {
+      "ID": 282,
+      "Name": "Silver",
+      "Description": "Level 4 rare upgrade material",
+      "Icon": "",
+      "Price": 750,
+      "IsCraftMaterial": true,
+      "CraftMaterialProperties": {
+        "Description": "Level 4 rare upgrade material",
+        "Level": 4
+      }
+    }
+  ],
+  "RewardsRare": [
+    {
+      "ID": 285,
+      "Name": "Skill Potion",
+      "Description": "Grants a skill point. Can only be consumed once per Monster",
+      "Icon": "",
+      "Price": 1000,
+      "IsConsumable": true,
+      "ConsumableProperties": {
+        "Icon": "icon_skill_potion",
+        "Description": "Grants a skill point. Can only be consumed once per monster"
+      },
+      "IsSkillPotion": true,
+      "SkillPotionProperties": {}
+    },
+    {
+      "ID": 1441,
+      "Name": "Craft Box",
+      "Description": "Consume to get random craft materials based on Keeper Rank.",
+      "Icon": "",
+      "Price": 750,
+      "IsConsumable": true,
+      "ConsumableProperties": {
+        "Icon": "icon_lootbox",
+        "Description": "Consume to get random craft materials based on Keeper Rank."
+      },
+      "IsCraftBox": true,
+      "CraftBoxProperties": {
+        "Rewards": [
+          {
+            "CommonRewards": [
+              {
+                "ID": 64,
+                "Name": "Copper",
+                "Description": "Level 1 common upgrade material",
+                "Icon": "",
+                "Price": 100,
+                "IsCraftMaterial": true,
+                "CraftMaterialProperties": {
+                  "Description": "Level 1 common upgrade material",
+                  "Level": 1
+                }
+              },
+              {
+                "ID": 48,
+                "Name": "Cotton",
+                "Description": "Level 1 common upgrade material",
+                "Icon": "",
+                "Price": 100,
+                "IsCraftMaterial": true,
+                "CraftMaterialProperties": {
+                  "Description": "Level 1 common upgrade material",
+                  "Level": 1
+                }
+              }
+            ],
+            "RareRewards": [
+              {
+                "ID": 50,
+                "Name": "Red Gem",
+                "Description": "Level 1 rare upgrade material",
+                "Icon": "",
+                "Price": 250,
+                "IsCraftMaterial": true,
+                "CraftMaterialProperties": {
+                  "Description": "Level 1 rare upgrade material",
+                  "Level": 1
+                }
+              },
+              {
+                "ID": 53,
+                "Name": "Blue Gem",
+                "Description": "Level 1 rare upgrade material",
+                "Icon": "",
+                "Price": 250,
+                "IsCraftMaterial": true,
+                "CraftMaterialProperties": {
+                  "Description": "Level 1 rare upgrade material",
+                  "Level": 1
+                }
+              },
+              {
+                "ID": 45,
+                "Name": "Green Gem",
+                "Description": "Level 1 rare upgrade material",
+                "Icon": "",
+                "Price": 250,
+                "IsCraftMaterial": true,
+                "CraftMaterialProperties": {
+                  "Description": "Level 1 rare upgrade material",
+                  "Level": 1
+                }
+              }
+            ],
+            "Rank": 0
+          },
+          {
+            "CommonRewards": [
+              {
+                "ID": 38,
+                "Name": "Iron",
+                "Description": "Level 2 common upgrade material",
+                "Icon": "",
+                "Price": 200,
+                "IsCraftMaterial": true,
+                "CraftMaterialProperties": {
+                  "Description": "Level 2 common upgrade material",
+                  "Level": 2
+                }
+              },
+              {
+                "ID": 284,
+                "Name": "Wool",
+                "Description": "Level 2 common upgrade material",
+                "Icon": "",
+                "Price": 200,
+                "IsCraftMaterial": true,
+                "CraftMaterialProperties": {
+                  "Description": "Level 2 common upgrade material",
+                  "Level": 2
+                }
+              }
+            ],
+            "RareRewards": [
+              {
+                "ID": 278,
+                "Name": "Bronze",
+                "Description": "Level 2 rare upgrade material",
+                "Icon": "",
+                "Price": 400,
+                "IsCraftMaterial": true,
+                "CraftMaterialProperties": {
+                  "Description": "Level 2 rare upgrade material",
+                  "Level": 2
+                }
+              }
+            ],
+            "Rank": 2
+          },
+          {
+            "CommonRewards": [
+              {
+                "ID": 806,
+                "Name": "Leather",
+                "Description": "Level 3 common upgrade material",
+                "Icon": "",
+                "Price": 300,
+                "IsCraftMaterial": true,
+                "CraftMaterialProperties": {
+                  "Description": "Level 3 common upgrade material",
+                  "Level": 3
+                }
+              }
+            ],
+            "RareRewards": [
+              {
+                "ID": 802,
+                "Name": "Crimson Gem",
+                "Description": "Level 3 rare upgrade material",
+                "Icon": "",
+                "Price": 500,
+                "IsCraftMaterial": true,
+                "CraftMaterialProperties": {
+                  "Description": "Level 3 rare upgrade material",
+                  "Level": 3
+                }
+              },
+              {
+                "ID": 804,
+                "Name": "Verdant Gem",
+                "Description": "Level 3 rare upgrade material",
+                "Icon": "",
+                "Price": 500,
+                "IsCraftMaterial": true,
+                "CraftMaterialProperties": {
+                  "Description": "Level 3 rare upgrade material",
+                  "Level": 3
+                }
+              },
+              {
+                "ID": 803,
+                "Name": "Azure Gem",
+                "Description": "Level 3 rare upgrade material",
+                "Icon": "",
+                "Price": 500,
+                "IsCraftMaterial": true,
+                "CraftMaterialProperties": {
+                  "Description": "Level 3 rare upgrade material",
+                  "Level": 3
+                }
+              },
+              {
+                "ID": 805,
+                "Name": "Raw Hide",
+                "Description": "Level 3 rare upgrade material",
+                "Icon": "",
+                "Price": 600,
+                "IsCraftMaterial": true,
+                "CraftMaterialProperties": {
+                  "Description": "Level 3 rare upgrade material",
+                  "Level": 3
+                }
+              }
+            ],
+            "Rank": 3
+          },
+          {
+            "CommonRewards": [
+              {
+                "ID": 283,
+                "Name": "Steel",
+                "Description": "Level 4 common upgrade material",
+                "Icon": "",
+                "Price": 350,
+                "IsCraftMaterial": true,
+                "CraftMaterialProperties": {
+                  "Description": "Level 4 common upgrade material",
+                  "Level": 4
+                }
+              },
+              {
+                "ID": 281,
+                "Name": "Silk",
+                "Description": "Level 4 common upgrade material",
+                "Icon": "",
+                "Price": 350,
+                "IsCraftMaterial": true,
+                "CraftMaterialProperties": {
+                  "Description": "Level 4 common upgrade material",
+                  "Level": 4
+                }
+              }
+            ],
+            "RareRewards": [
+              {
+                "ID": 282,
+                "Name": "Silver",
+                "Description": "Level 4 rare upgrade material",
+                "Icon": "",
+                "Price": 750,
+                "IsCraftMaterial": true,
+                "CraftMaterialProperties": {
+                  "Description": "Level 4 rare upgrade material",
+                  "Level": 4
+                }
+              }
+            ],
+            "Rank": 5
+          },
+          {
+            "CommonRewards": [
+              {
+                "ID": 280,
+                "Name": "Linen",
+                "Description": "Level 5 common upgrade material",
+                "Icon": "",
+                "Price": 500,
+                "IsCraftMaterial": true,
+                "CraftMaterialProperties": {
+                  "Description": "Level 5 common upgrade material",
+                  "Level": 5
+                }
+              }
+            ],
+            "RareRewards": [
+              {
+                "ID": 1435,
+                "Name": "Sapphire",
+                "Description": "Level 5 rare upgrade material",
+                "Icon": "",
+                "Price": 1000,
+                "IsCraftMaterial": true,
+                "CraftMaterialProperties": {
+                  "Description": "Level 5 rare upgrade material",
+                  "Level": 5
+                }
+              },
+              {
+                "ID": 1433,
+                "Name": "Emerald",
+                "Description": "Level 5 rare upgrade material",
+                "Icon": "",
+                "Price": 1000,
+                "IsCraftMaterial": true,
+                "CraftMaterialProperties": {
+                  "Description": "Level 5 rare upgrade material",
+                  "Level": 5
+                }
+              },
+              {
+                "ID": 279,
+                "Name": "Ruby",
+                "Description": "Level 5 rare upgrade material",
+                "Icon": "",
+                "Price": 1000,
+                "IsCraftMaterial": true,
+                "CraftMaterialProperties": {
+                  "Description": "Level 5 rare upgrade material",
+                  "Level": 5
+                }
+              },
+              {
+                "ID": 1426,
+                "Name": "Gold",
+                "Description": "Level 5 rare upgrade material",
+                "Icon": "",
+                "Price": 1200,
+                "IsCraftMaterial": true,
+                "CraftMaterialProperties": {
+                  "Description": "Level 5 rare upgrade material",
+                  "Level": 5
+                }
+              }
+            ],
+            "Rank": 6
+          }
+        ],
+        "SFXGetReward": {
+          "length": 1.090907,
+          "samples": 48109,
+          "channels": 2,
+          "frequency": 44100,
+          "isReadyToPlay": true,
+          "loadType": 0,
+          "preloadAudioData": true,
+          "ambisonic": false,
+          "loadState": 2,
+          "loadInBackground": false,
+          "name": "LevelUp",
+          "hideFlags": 0
+        }
+      }
+    },
+    {
+      "ID": 1399,
+      "Name": "Shockhopper Egg",
+      "Description": "Consume to hatch: Shockhopper",
+      "Icon": "",
+      "Price": 600,
+      "IsEgg": true,
+      "EggProperties": {
+        "Monster": 1398
+      }
+    }
+  ],
+  "NoRareRewards": true,
+  "Appearances": [
+    {
+      "SceneName": "SnowyPeaks_East1",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_East2",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_East3",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_East4",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_East5",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_West1",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_West2",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_WestDark",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_West3",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_West4",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_WestMountain1",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_WestMountain2",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_WestMountain3",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_WestMountain4",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_WestMountain5",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_HighChallenge",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_WestMountain6",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_Bridge",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_WestMountain7",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_WestMountainSecret",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_EastMountain1",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_Lake",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_ChampionRoom",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_EastMountain2",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_EastDark",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_EastMountain3",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_EastMountainClothesmaker",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_EastMountain4",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_EastMountain5",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_ClothesmakerHouse",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_EastMountainTop",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_Cryomancer",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_SunPalaceEntrance",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_West5",
+      "MapAreaName": "Snowy Peaks"
+    },
+    {
+      "SceneName": "SnowyPeaks_ChampionRoom2",
+      "MapAreaName": "Snowy Peaks"
+    }
+  ]
+}
