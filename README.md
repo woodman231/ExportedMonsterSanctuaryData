@@ -14,3 +14,7 @@ This repository is simply the results of executing this Monster Sanctuary BepInE
 
 - If the skill or item had some "On" methods those "On" method names were extracted and properties like "IsOnReceiveBuffPreCheck" = true were made possible. Again this will either only be defined as "IsOnReceiveBuffPreCheck" = true, or just simply not defined at all. There is no such thing as "IsOnReceiveBuffPreCheck" = false.
 
+### Looking for TypeScript types?
+ Check out the [ExportedMonsterSanctuaryDataTypes package](https://www.npmjs.com/package/@woodman231/exportedmonstersanctuarydatatypes). You may also be interested in how that types file was built. Check out the [ExportedMonsterSanctuaryDataTypesGenerator package](https://www.npmjs.com/package/@woodman231/exportedmonstersanctuarydatatypesgenerator).
+
+DISCLAIMER: This package was made by a fan of the game. I am not associated with [Moi Rai Games](https://monster-sanctuary.com/) the developer, nor [Team 17](https://www.team17.com/) the distributor.
